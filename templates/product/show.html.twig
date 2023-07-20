@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+    <h1>Sản phẩm</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <td>{{ product.Name }}</td>
+            </tr>
+            <tr>
+                <th>Giá</th>
+                <td>{{ product.Price }}</td>
+            </tr>
+            <tr>
+                <th>Hình ảnh</th>
+                <td>{{ product.Image }}</td>
+            </tr>
+            <tr>
+                <th>Thông tin</th>
+                <td>{{ product.Info }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_product_index') }}">Quay trở về</a>
+
+    <a href="{{ path('app_product_edit', {'id': product.id}) }}">Chỉnh sửa</a>
+
+    {{ include('product/_delete_form.html.twig') }}
+{% endblock %}

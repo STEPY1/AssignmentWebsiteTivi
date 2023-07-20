@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1><i class="fas fa-dizzy"></i>Tài khoản người dùng<i class="fas fa-dizzy"> </i></h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Địa chỉ Email</th>
+            <th>Mật khẩu</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {%for user in users %}
+        <tr>
+            <td>{{user.id }}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+        </tr>
+        </tbody>
+        {#            {{ include('user/_delete_form.html.twig') }}#}
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+
+{% endblock %}

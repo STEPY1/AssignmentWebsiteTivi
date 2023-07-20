@@ -1,0 +1,242 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        /* Section Packages Start */
+        .main-txt h1{
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 600;
+            text-shadow: 0px 1px 1px black;
+        }
+        .main-txt h1 span{
+            color: #ffa500;
+        }
+        .packages .card{
+            border-radius: 5px;
+            border: none;
+            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+        }
+        .packages .card img{
+            border-radius: 5px;
+        }
+        .packages .card .card-body{
+            background: transparent;
+        }
+        .packages .card .card-body h3{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .packages .card .card-body p{
+            font-size: 15px;
+        }
+        .checked{
+            color: #ffa500;
+        }
+        .star i{
+            font-size: 15px;
+        }
+        .packages .card .card-body h6{
+            font-size: 20px;
+        }
+        .packages .card .card-body a{
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 5px;
+        }
+        /* Section Packages End */
+
+        /* Section Gallary Start */
+        .gallary{
+            margin-top: 50px;
+        }
+        .gallary .card{
+            border-radius: 10px;
+            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+            cursor: pointer;
+        }
+        .gallary .card img{
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        .gallary .card img:hover{
+            transform: scale(1.1);
+        }
+        /* Section Gallary End */
+
+
+        /* Footer Start */
+        #footer{
+            width: 100%;
+            margin-top: 150px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        #footer h1{
+            font-weight: 600;
+            padding-top: 30px;
+            text-shadow: 0px 0px 1px black;
+        }
+        #footer h1 span{
+            color: #ffa500;
+        }
+        .social-links i{
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            background: black;
+            color: white;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        .social-links i:hover{
+            background: #ffa500;
+        }
+        /* Footer End */
+        .main-hint li {
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 15px;
+
+        }
+        .main-hint li a:hover{
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+    </head>
+    <body>
+{#    {% for product in products %}#}
+
+{#    <div class="card-wrapper">#}
+{#        <div class="card">#}
+{#           <!-- card left -->#}
+{#            <div class="product-imgs">#}
+{#                <div class="img-display">#}
+{#                    <div class="img-showcase">#}
+{#                        <img src="{{ asset('image/' ~ product.getImage()) }}" alt="{{ product.getName() }}">#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <!-- card right -->#}
+{#            <div class="product-content">#}
+{#                <h2 class="product-title">{{ product.getName() }}</h2>#}
+{#                <a href="#" class="product-link">Visit Tivi store</a>#}
+{#                <div class="product-rating">#}
+{#                    <i class = "fas fa-star"></i>#}
+{#                    <i class = "fas fa-star"></i>#}
+{#                    <i class = "fas fa-star"></i>#}
+{#                    <i class = "fas fa-star"></i>#}
+{#                    <i class = "fas fa-star-half-alt"></i>#}
+{#                    <span>4.5 (101)</span>#}
+{#                </div>#}
+{#                <div class="product-price">#}
+{#                    <p class = "last-price">Old Price: <span>90.000.001 VNĐ</span></p>#}
+{#                    <p class = "new-price">New Price: <span>{{ product.getPrice() }} VNĐ</span></p>#}
+{#                </div>#}
+{#                <div class = "product-detail">#}
+{#                    <h2>About this item: </h2>#}
+{#                    <p>{{ product.getInfo() }}</p>#}
+{#                    <ul>#}
+{#                        <li>Color: <span>Black</span></li>#}
+{#                        <li>Available: <span>in stock</span></li>#}
+{#                        <li>Category: <span>Tivi</span></li>#}
+{#                        <li>Shipping Area: <span>All over the world</span></li>#}
+{#                        <li>Shipping Fee: <span>Free</span></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+
+
+{#        </div>#}
+{#    </div>#}
+{#    {% endfor %}#}
+
+    <!-- Section Packages Start -->
+    <section class="packages" id="packages">
+        <div class="container">
+
+            <div class="main-txt " >
+                <h1 href="{{ path('app_home') }}" role="button"><span  >TV </span>OLED</h1>
+            </div>
+            <div class="main-hint col-md-8 ">
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung">OLED</a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic">QLED</a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k">Neo QLED 4K</a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k">Neo QLED 8k</a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry">Crystal UHD</a></li>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                {% for product in products %}
+                    <div class="col-md-4 py-5 py-md-2">
+                        <div class="card">
+                            <img src="{{ asset('image/' ~ product.getImage()) }}"  alt={{ product.getName() }}>
+                            <div class="card-body">
+                                <h3>{{ product.getName() }}</h3>
+{#                                <p>{{ product.getInfo() }}</p>#}
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked "></i>
+                                    <i class="fa-solid fa-star "></i>
+                                </div>
+                                <h6>Giá: <strong>{{ product.getPrice() }} vnđ</strong></h6>
+                                <a href="{{ path('app_detail_show', {'id': product.id}) }} ">Thông tin sản phẩm</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    <!-- Section Packages End -->
+
+
+
+
+    <!-- Footer Start -->
+    <footer id="footer">
+        <h1><span>🎯Ruby</span>.span</h1>
+        <p>Thông tin liên hệ</p>
+        <div class="social-links">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+        {#        <div class="credit">#}
+        {#            <p>Designed By <a href="#">SA Coding</a></p>#}
+        {#        </div>#}
+        {#        <div class="copyright">#}
+        {#            <p>&copy;Copyright SA Coding. All Rights Reserved</p>#}
+        {#        </div>#}
+    </footer>
+    <!-- Footer End -->
+
+
+
+    </body>
+{% endblock %}
+
+
+
+
+
+

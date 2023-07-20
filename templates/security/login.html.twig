@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <style>
+        /* Section Packages Start */
+        .main-txt h1{
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 600;
+            text-shadow: 0px 1px 1px black;
+        }
+        .main-txt h1 span{
+            color: #ffa500;
+        }
+        .packages .card{
+            border-radius: 5px;
+            border: none;
+            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+        }
+        .packages .card img{
+            border-radius: 5px;
+        }
+        .packages .card .card-body{
+            background: transparent;
+        }
+        .packages .card .card-body h3{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .packages .card .card-body p{
+            font-size: 15px;
+        }
+        .checked{
+            color: #ffa500;
+        }
+        .star i{
+            font-size: 15px;
+        }
+        .packages .card .card-body h6{
+            font-size: 20px;
+        }
+        .packages .card .card-body a{
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 5px;
+        }
+        /* Section Packages End */
+
+    </style>
+
+<body>
+<div class="packages">
+<form method="post" >
+
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+{#    {% if app.user %}#}
+{#        <div class="mb-3">#}
+{#           Ban đang đăng nhập tài khoản : {{ app.user.userIdentifier }} <a href="{{ path('app_logout') }}">Logout</a>#}
+{#        </div>#}
+{#    {% endif %}#}
+
+    <h1 class="h3 mb-3 font-weight-normal"><strong>Đăng nhập</strong></h1>
+
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}">
+
+    <div class="form-floating mb-3">
+
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+        <label for="inputEmail">Gmail</label>
+    </div>
+        <h3><strong>Mật khẩu</strong></h3>
+    <div class="form-floating">
+
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+        <label for="inputPassword">Mật khẩu</label>
+    </div>
+        <button class="btn btn-lg btn-primary col-left py-md-2" type="submit">
+            Đăng nhập
+        </button>
+        <button class="btn btn-lg btn-primary col-right py-md-2" >
+            <a class="btn" style="color:white" href="{{ path('app_register') }}">Đăng kí</a>
+        </button>
+
+</form>
+    </div>
+</body>
+{% endblock %}
+ {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}

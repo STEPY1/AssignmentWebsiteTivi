@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+
+
+
+    <body>
+    <h1>Sản Phẩm</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th><strong>Id</strong></th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Hình ảnh</th>
+                <th>Thông tin</th>
+                <th>Hoạt động</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td><strong>{{ product.id }}</strong></td>
+                <td>{{ product.Name }}</td>
+                <td><strong>{{ product.Price }}</strong></td>
+                <td>
+                    <img src=" {{ asset('Image/' ~ product.getImage()) }}" >
+                </td>
+                <td>{{ product.Info }}</td>
+                <td>
+                    <a href="{{ path('app_product_show', {'id': product.id}) }}"><strong>show</strong></a>
+                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary"><a href="{{ path('app_product_new') }}">Create new</a></button>
+    </body>
+{% endblock %}

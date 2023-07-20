@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Contact{% endblock %}
+
+{% block body %}
+    <style>
+        /* Section Packages Start */
+        h1{
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 600;
+            text-shadow: 0px 1px 1px black;
+        }
+         h1 span{
+            color: #ffa500;
+        }
+        .packages .card{
+            border-radius: 5px;
+            border: none;
+            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+        }
+        .packages .card img{
+            border-radius: 5px;
+        }
+        .packages .card .card-body{
+            background: transparent;
+        }
+        h3{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .packages .card .card-body p{
+            font-size: 15px;
+        }
+        .checked{
+            color: #ffa500;
+        }
+        .star i{
+            font-size: 15px;
+        }
+        .packages .card .card-body h6{
+            font-size: 20px;
+        }
+        .packages .card .card-body a{
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 5px;
+        }
+        /* Section Packages End */
+        .container .main-txt a{
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 5px;
+        }
+        .container .main-txt a:hover{
+            padding: 12px;
+            color: black;
+        }
+
+
+
+    </style>
+    <body>
+    <div class="container">
+        <div class="main-txt py-md-2">
+            <a href="{{ path('app_home') }}"><strong>Trở về</strong></a>
+        </div>
+
+        {{ include('contact/_form.html.twig') }}
+
+    </div>
+
+    </body>
+{% endblock %}

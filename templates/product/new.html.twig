@@ -1,0 +1,13 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <h1>Thêm sản phẩm mới</h1>
+
+    {{ include('product/_form.html.twig') }}
+
+    <a href="{{ path('app_product_index') }}">Quay trở lại</a>
+
+{% endblock %}
