@@ -700,26 +700,26 @@
 
 {% if app.user %}
     <!-- Section Gallary Start -->
-    <section class="gallary" id="gallary">
-        <div class="container">
+{#    <section class="gallary" id="gallary">#}
+{#        <div class="container">#}
 
-            <div class="main-txt">
-                <h1><span>Các mẫu </span>TV</h1>
-            </div>
+{#            <div class="main-txt">#}
+{#                <h1><span>Các mẫu </span>TV</h1>#}
+{#            </div>#}
 
-            <div class="row" style="margin-top: 30px;">
-                {% for product in products %}
-                    <a class="col-md-4 py-100 py-md-2" href="{{ path('app_detail_show', {'id': product.id}) }} ">
-                        <div class="">
-                            <div class="card" >
-                                <img src={{ asset('image/' ~ product.getImage()) }} alt="{{ product.getName() }}" height="230px">
-                            </div>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+{#            <div class="row" style="margin-top: 30px;">#}
+{#                {% for product in products %}#}
+{#                    <a class="col-md-4 py-100 py-md-2" href="{{ path('app_detail_show', {'id': product.id}) }} ">#}
+{#                        <div class="">#}
+{#                            <div class="card" >#}
+{#                                <img src={{ asset('image/' ~ product.getImage()) }} alt="{{ product.getName() }}" height="230px">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </a>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
     <!-- Section Gallary End -->
 {% endif %}
 
