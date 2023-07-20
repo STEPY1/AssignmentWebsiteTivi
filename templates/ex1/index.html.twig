@@ -64,6 +64,19 @@
                 padding: 0;
             }
         }
+
+        .container .main-txt a{
+            padding: 10px;
+            text-decoration: none;
+            background: #ffa500;
+            color: white;
+            border-radius: 5px;
+        }
+        .container .main-txt a:hover{
+            padding: 12px;
+            color: black;
+            border-radius: 5px;
+        }
         /* About End */
     </style>
     <body>
@@ -72,7 +85,8 @@
         <div class="container">
 
             <div class="main-txt">
-                <h1>Tìm hiểu thêm <span> về TV</span></h1>
+                <a href="{{ path('app_home') }}">Trở về</a>
+                <h1>TV<span> thông minh</span></h1>
             </div>
 
             <div class="row" style="margin-top: 50px;">
@@ -84,89 +98,42 @@
                 </div>
 
                 <div class="col-md-6 py-3 py-md-0">
-                    <h2>TV thông minh</h2>
-                    <p> TV thông minh hay còn được gọi là Smart tivi là những chiếc tivi chạy trên nền tảng một hệ điều hành do chính nhà sản xuất viết hoặc bên thứ ba cung cấp, kèm theo đó là RAM và bộ nhớ, cho phép bạn dễ dàng kết nối với Internet để tải và sử dụng các ứng dụng như smartphone hoặc máy tính thông thường.</p>
-                    <button id="about-btn" ><a class="btn" style="color: black" >Đọc thêm...</a></button>
+                    <h2> </h2>
+                    <p>➖ TV thông minh hay còn được gọi là Smart tivi là những chiếc tivi chạy trên nền tảng một hệ điều hành do chính nhà sản xuất viết hoặc bên thứ ba cung cấp, kèm theo đó là RAM và bộ nhớ, cho phép bạn dễ dàng kết nối với Internet để tải và sử dụng các ứng dụng như smartphone hoặc máy tính thông thường.</p>
+                    <p>➖ Người dùng có thể cài đặt các ứng dụng như: trình duyệt web, game, Youtube, Zing TV, FPT Play… </p>
+                    <p>➖ Ngoài những ứng dụng phổ biến ra thì các nhà sản xuất tivi cũng đem tới cho người dùng một kho ứng dụng với rất nhiều những sự lựa chọn.</p>
                 </div>
 
             </div>
 
 
             <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6 py-3 py-md-0">
 
+                    <p>➕ <strong>Những tính năng nổi bật của TV thông minh</strong></p>
+
+                    <p5>➖ Tính năng truyền hình ảnh từ điện thoại lên TV thông minh: Smart tivi được trang bị tính năng truyền tải hình ảnh từ điện thoại lên màn hình tivi với kích thước lớn hơn gấp nhiều lần giúp hình ảnh trở nên sống động và rõ nét hơn. </p5>
+<br>
+                    <p5>➖ Tính năng điều khiển bằng giọng nói: Chiếc Smart tivi còn có tính năng điều khiển bằng giọng nói hay cử chỉ giúp chúng ta thao tác nhanh hơn thay vì dùng remote như bình thường. Tính năng này hỗ trợ cả ngôn ngữ tiếng Việt lẫn tiếng Anh. Ngoài ra, có còn nhận diện một cách toàn diện, không phân biệt giọng nam hay nữ, hoặc giọng vùng miền, địa phương. </p5>
+<br>
+
+
+                    <p5>➖ Điều khiển tivi từ xa bằng điện thoại: Để điều khiển Smart tivi, ngoài sử dụng remote, bạn còn có thể dùng các ứng dụng điều khiển tivi bằng điện thoại. Khi điều khiển tivi bằng điện thoại, thao tác trở nên đơn giản hơn. </p5>
+
+
+                </div>
                 <div class="col-md-6 py-3 py-md-0">
                     <div class="card">
                         <img src="Image/19.jpg" alt="">
                     </div>
                 </div>
 
-                <div class="col-md-6 py-3 py-md-0">
-                    <h2>Hướng dẫn mua TV</h2>
-                    <p>5 điều phải biết khi mua TV ...</p>
-                    <button id="about-btn"><a class="btn" style="color: black" >Đọc thêm...</a></button>
-                </div>
+
 
             </div>
         </div>
     </section>
 
-
-    <section class="about" id="about">
-        <div class="container">
-
-            <div class="main-txt py-md-3">
-                <h1><span>Thông tin</span> liên hệ</h1>
-            </div>
-            <div class="row" style="margin-top: 50px;">
-
-                <div class="col-md-6 py-3 py-md-0">
-                    <div class="card">
-                        <img src="Image/contact-us.jpg" alt="">
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 py-3 py-md-0">
-                    <h2 style="text-align: center"><span>Thông tin</span> liên hệ</h2>
-                    <h2 style="text-align: center">👇👇👇</h2>
-                    {#                    <p>5 điều phải biết khi mua TV ...</p>#}
-
-                    {#                    <form class="row g-3">#}
-
-                    {#                        <div class="col-md-6">#}
-                    {#                            <label for="inputEmail4" class="form-label">Name</label>#}
-                    {#                            <input type="text" class="form-control" id="inputEmail4">#}
-                    {#                        </div>#}
-                    {#                        <div class="col-md-6">#}
-                    {#                            <label for="inputphone" class="form-label">Phone</label>#}
-                    {#                            <input type="Number" class="form-control" id="inputphone">#}
-                    {#                        </div>#}
-                    {#                        <div class="col-md-12">#}
-                    {#                            <label for="inputEmail4" class="form-label">Email</label>#}
-                    {#                            <input type="email" class="form-control" id="inputEmail4">#}
-                    {#                        </div>#}
-
-                    {#                        <div class="col-12">#}
-                    {#                            <label for="inputAddress" class="form-label">Address</label>#}
-                    {#                            <input type="text" class="form-control" id="inputAddress" placeholder="99 Nguyễn trãi">#}
-                    {#                        </div>#}
-                    {#                    </form>#}
-
-                    <div class="col-12 py-md-3" style="text-align: center">
-
-                        <button type="submit"   id="about-btn">
-                            <li ><a class="btn" href="{{ path('app_contact_new') }}">Nhấn vào đây</a></li>
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
     </body>
     {#    <!-- About End -->#}
 {% endblock %}
