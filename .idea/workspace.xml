@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46a52e5d-af58-49dd-8ace-757e61ce796c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NeoQled8kController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NeoQled8kController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cry/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cry/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/samsung/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samsung/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sonic/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sonic/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +223,8 @@
       <workItem from="1689742420834" duration="13972000" />
       <workItem from="1689763653683" duration="21706000" />
       <workItem from="1689818707246" duration="5480000" />
-      <workItem from="1689836319900" duration="8178000" />
+      <workItem from="1689836319900" duration="8230000" />
+      <workItem from="1689984582970" duration="3872000" />
     </task>
     <servers />
   </component>
@@ -247,10 +256,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="279" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1688978843570" />
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1689836319631">
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1689984582534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1689836319631" />
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1689984582534" />
     <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1688979645974">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

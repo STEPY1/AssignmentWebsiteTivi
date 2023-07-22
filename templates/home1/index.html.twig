@@ -1,36 +1,37 @@
+
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{#    <body>#}
-{#    <section class="section__container destination__container">#}
-{#        <div class="section__header">#}
-{#            <div>#}
-{#            <h2 class="section__title">Tivi products</h2>#}
-{#            <p class="section__subtitle">ALL Product</p>#}
-{#            </div>#}
+    {#    <body>#}
+    {#    <section class="section__container destination__container">#}
+    {#        <div class="section__header">#}
+    {#            <div>#}
+    {#            <h2 class="section__title">Tivi products</h2>#}
+    {#            <p class="section__subtitle">ALL Product</p>#}
+    {#            </div>#}
 
-{#        </div>#}
-{#    <div class="destination__grid">#}
-{#        {% for product in products %}#}
-{#            <a href="{{ path('app_detail_show', {'id': product.id}) }}">#}
-{#                <div class="destination__card">#}
-{#                    <div>#}
-{#                        <img src={{ asset('image/' ~ product.getImage()) }}   alt="{{ product.getName() }}">#}
-{#                        <div class="destination__details">#}
-{#                            <p class="destination__title">{{ product.getName() }}</p>#}
-{#                            <p class="destination__subtitle">{{ product.getInfo() }}</p>#}
-{#                            <p class="booking__price">Giá: {{ product.getPrice() }}$</p>#}
-{#                        </div>#}
+    {#        </div>#}
+    {#    <div class="destination__grid">#}
+    {#        {% for product in products %}#}
+    {#            <a href="{{ path('app_detail_show', {'id': product.id}) }}">#}
+    {#                <div class="destination__card">#}
+    {#                    <div>#}
+    {#                        <img src={{ asset('image/' ~ product.getImage()) }}   alt="{{ product.getName() }}">#}
+    {#                        <div class="destination__details">#}
+    {#                            <p class="destination__title">{{ product.getName() }}</p>#}
+    {#                            <p class="destination__subtitle">{{ product.getInfo() }}</p>#}
+    {#                            <p class="booking__price">Giá: {{ product.getPrice() }}$</p>#}
+    {#                        </div>#}
 
-{#                    </div>#}
-{#                </div>#}
-{#            </a>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </a>#}
 
 
-{#        {% endfor %}#}
-{#    </div>#}
-{#    </section>#}
-{#    </body>#}
+    {#        {% endfor %}#}
+    {#    </div>#}
+    {#    </section>#}
+    {#    </body>#}
 
 
 
@@ -277,7 +278,6 @@
                 margin-top: 30px;
                 font-weight: 600;
                 text-shadow: 0px 1px 1px black;
-
             }
             .main-txt-1 h1 span{
                 color: #ffa500;
@@ -472,6 +472,10 @@
                 background: #ffa500;
             }
             /* Footer End */
+            .main-hint{
+                background: orange;
+                border-radius: 10px;
+            }
             .main-hint li {
                 padding: 10px;
                 text-decoration: none;
@@ -503,180 +507,261 @@
 
     <body>
 
-{% if app.user %}
-    <!-- Section Packages Start -->
-    <section class="packages" id="packages">
-        <div class="container">
 
-            <div class="main-txt py-md-2">
-                <h1 ><span>Tất cả các dòng</span> TV</h1>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar1">
-                <span><i class="fa-solid fa-bars"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar1">
-            <div class="main-hint col-md-12 ">
-                <li class="col"><a class="btn" href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
-                <li class="col"><a class="btn" href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
-                <li class="col"><a class="btn" href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
-                <li class="col"><a class="btn" href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
-                <li class="col"><a class="btn" href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
-            </div>
-            </div>
 
-            <div class="row" style="margin-top: 30px;">
+    {#    <!-- Navbar Start -->#}
+    {#    <nav class="navbar navbar-expand-lg" id="navbar">#}
+    {#        <div class="container">#}
+    {#            <a class="navbar-brand" href="index.html" id="logo"><span>T</span>ravel</a>#}
+    {#            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">#}
+    {#                <span><i class="fa-solid fa-bars"></i></span>#}
+    {#            </button>#}
+    {#            <div class="collapse navbar-collapse" id="mynavbar">#}
+    {#                <ul class="navbar-nav me-auto">#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link active" href="#">Home</a>#}
+    {#                    </li>#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link" href="#book">Book</a>#}
+    {#                    </li>#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link" href="#packages">Packages</a>#}
+    {#                    </li>#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link" href="#services">Services</a>#}
+    {#                    </li>#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link" href="#gallary">Gallary</a>#}
+    {#                    </li>#}
+    {#                    <li class="nav-item">#}
+    {#                        <a class="nav-link" href="#about">About</a>#}
+    {#                    </li>#}
 
-                {% for product in products %}
-                <div class="col-md-4 py-5 py-md-2"   >
-                    <div class="card">
-                        <img src="{{ asset('image/' ~ product.getImage()) }}"  alt={{ product.getName() }}>
-                        <div class="card-body">
-                            <h3>{{ product.getName() }}</h3>
-{#                            <p>{{ product.getInfo() }}</p>#}
-                            <div class="star">
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked "></i>
-                                <i class="fa-solid fa-star "></i>
-                            </div>
-                            <h6>Giá: <strong>{{ product.getPrice() }} vnđ</strong></h6>
-                            <a href="{{ path('app_detail_show', {'id': product.id}) }} ">Thông tin sản phẩm</a>
-                        </div>
-                    </div>
+    {#                </ul>#}
+    {#                <form class="d-flex">#}
+    {#                    <input class="form-control me-2" type="text" placeholder="Search">#}
+    {#                    <button class="btn btn-primary" type="button">Search</button>#}
+    {#                </form>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </nav>#}
+    {#    <!-- Navbar End -->#}
+
+    {#    <!-- Home Section Start -->#}
+    {#    <div class="home">#}
+    {#        <div class="content">#}
+    {#            <h5>Welcome To World</h5>#}
+    {#            <h1>Visit <span class="changecontent"></span></h1>#}
+    {#            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, nisi.</p>#}
+    {#            <a href="#book">Book Place</a>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <!-- Home Section End -->#}
+
+
+    {#    <!-- Section Book Start -->#}
+    {#    <section class="book" id="book">#}
+    {#        <div class="container">#}
+
+    {#            <div class="main-text">#}
+    {#                <h1><span>B</span>ook</h1>#}
+    {#            </div>#}
+
+    {#            <div class="row">#}
+
+    {#                <div class="col-md-6 py-3 py-md-0">#}
+    {#                    <div class="card">#}
+    {#                        <img src="Image/book-img.png" alt="">#}
+    {#                    </div>#}
+    {#                </div>#}
+
+    {#                <div class="col-md-6 py-3 py-md-0">#}
+    {#                    <form action="#">#}
+
+    {#                        <input type="text" class="form-control" placeholder="Where To" required><br>#}
+    {#                        <input type="text" class="form-control" placeholder="How Many" required><br>#}
+    {#                        <input type="date" class="form-control" placeholder="Arrivals" required><br>#}
+    {#                        <input type="date" class="form-control" placeholder="Leaving" required><br>#}
+    {#                        <textarea class="form-control" rows="5" name="text" placeholder="Enter Your Name & Details"></textarea>#}
+    {#                        <input type="submit" value="Book Now" class="submit" required>#}
+
+    {#                    </form>#}
+    {#                </div>#}
+
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+    {#    <!-- Section Book End -->#}
+
+
+    {% if app.user %}
+        <!-- Section Packages Start -->
+        <section class="packages" id="packages">
+            <div class="container">
+
+                <div class="main-txt py-md-2">
+                    <h1 ><span>Tất cả các sản phẩm</span> TV</h1>
                 </div>
-                {% endfor %}
+                <div class="main-hint col-md-8 " >
+                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
+                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
+                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
+                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
+                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
+                </div>
+
+                <div class="row" style="margin-top: 30px;">
+
+                    {% for product in products %}
+                        <div class="col-md-4 py-5 py-md-2"   >
+                            <div class="card">
+                                <img src="{{ asset('image/' ~ product.getImage()) }}"  alt={{ product.getName() }}>
+                                <div class="card-body">
+                                    <h3>{{ product.getName() }}</h3>
+                                    {#                            <p>{{ product.getInfo() }}</p>#}
+                                    <div class="star">
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star checked "></i>
+                                        <i class="fa-solid fa-star "></i>
+                                    </div>
+                                    <h6>Giá: <strong>{{ product.getPrice() }} vnđ</strong></h6>
+                                    <a href="{{ path('app_detail_show', {'id': product.id}) }} ">Thông tin sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="main-txt-1 py-md-2">
+                    <h1><a role="button" class="btn btn-outline-warning" style="color: black" href="{{ path('app_home') }}"><strong>Thu gọn<span> sản phẩm</span></strong></a></h1>
+                </div>
             </div>
-            <div class="main-txt-1 py-md-2">
 
-                <h1><a role="button" class="btn btn-outline-warning" style="color: black" href="http://127.0.0.1:8000/home1"><strong>Xem tất cả<span> sản phẩm</span></strong></a></h1>
-            </div>
-        </div>
+        </section>
+        <!-- Section Packages End -->
+    {% endif %}
 
-    </section>
-    <!-- Section Packages End -->
-{% endif %}
+    {#    <!-- Section Services Start -->#}
+    {#    <section class="services" id="services">#}
+    {#        <div class="container">#}
 
-{#    <!-- Section Services Start -->#}
-{#    <section class="services" id="services">#}
-{#        <div class="container">#}
+    {#            <div class="main-txt">#}
+    {#                <h1><span>S</span>ervices</h1>#}
+    {#            </div>#}
 
-{#            <div class="main-txt">#}
-{#                <h1><span>S</span>ervices</h1>#}
-{#            </div>#}
+    {#            <div class="row" style="margin-top: 30px;">#}
 
-{#            <div class="row" style="margin-top: 30px;">#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-hotel"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Affordable Hotel</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-hotel"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Affordable Hotel</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                </div>#}
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-utensils"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Food & Drinks</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-utensils"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Food & Drinks</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                </div>#}
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-bullhorn"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Safty Guide</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-bullhorn"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Safty Guide</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
-
-{#                </div>#}
+    {#                </div>#}
 
 
 
-{#            </div>#}
+    {#            </div>#}
 
 
-{#            <div class="row" style="margin-top: 30px;">#}
+    {#            <div class="row" style="margin-top: 30px;">#}
 
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-globe-asia"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Around The World</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-globe-asia"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Around The World</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                </div>#}
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-plane"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Fastest Travel</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-plane"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Fastest Travel</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                </div>#}
-{#                <div class="col-md-4 py-3 py-md-0">#}
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
 
-{#                    <div class="card">#}
-{#                        <i class="fas fa-hiking"></i>#}
-{#                        <div class="card-body">#}
-{#                            <h3>Adventures</h3>#}
-{#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
-{#                        </div>#}
-{#                    </div>#}
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-hiking"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Adventures</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
 
-{#                </div>#}
-
-
-
-{#            </div>#}
-
-{#        </div>#}
-{#    </section>#}
-{#    <!-- Section Services End -->#}
-
-{% if app.user %}
-    <!-- Section Gallary Start -->
-{#    <section class="gallary" id="gallary">#}
-{#        <div class="container">#}
-
-{#            <div class="main-txt">#}
-{#                <h1><span>Các mẫu </span>TV</h1>#}
-{#            </div>#}
-
-{#            <div class="row" style="margin-top: 30px;">#}
-{#                {% for product in products %}#}
-{#                    <a class="col-md-4 py-100 py-md-2" href="{{ path('app_detail_show', {'id': product.id}) }} ">#}
-{#                        <div class="">#}
-{#                            <div class="card" >#}
-{#                                <img src={{ asset('image/' ~ product.getImage()) }} alt="{{ product.getName() }}" height="230px">#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-    <!-- Section Gallary End -->
-{% endif %}
+    {#                </div>#}
 
 
-{#    <!-- About Start -->#}
+
+    {#            </div>#}
+
+    {#        </div>#}
+    {#    </section>#}
+    {#    <!-- Section Services End -->#}
+
+    {% if app.user %}
+        <!-- Section Gallary Start -->
+        {#    <section class="gallary" id="gallary">#}
+        {#        <div class="container">#}
+
+        {#            <div class="main-txt">#}
+        {#                <h1><span>Các mẫu </span>TV</h1>#}
+        {#            </div>#}
+
+        {#            <div class="row" style="margin-top: 30px;">#}
+        {#                {% for product in products %}#}
+        {#                    <a class="col-md-4 py-100 py-md-2" href="{{ path('app_detail_show', {'id': product.id}) }} ">#}
+        {#                        <div class="">#}
+        {#                            <div class="card" >#}
+        {#                                <img src={{ asset('image/' ~ product.getImage()) }} alt="{{ product.getName() }}" height="230px">#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </a>#}
+        {#                {% endfor %}#}
+        {#            </div>#}
+        {#        </div>#}
+        {#    </section>#}
+        <!-- Section Gallary End -->
+    {% endif %}
+
+
+    {#    <!-- About Start -->#}
     <section class="about" id="about">
         <div class="container">
 
@@ -720,7 +805,7 @@
     </section>
 
 
-        <section class="about" id="contant">
+    <section class="about" id="about">
         <div class="container">
 
             <div class="main-txt py-md-3">
@@ -738,28 +823,28 @@
                 <div class="col-md-6 py-3 py-md-0">
                     <h2 style="text-align: center"><span>Thông tin</span> liên hệ</h2>
                     <h2 style="text-align: center">👇👇👇</h2>
-{#                    <p>5 điều phải biết khi mua TV ...</p>#}
+                    {#                    <p>5 điều phải biết khi mua TV ...</p>#}
 
-{#                    <form class="row g-3">#}
+                    {#                    <form class="row g-3">#}
 
-{#                        <div class="col-md-6">#}
-{#                            <label for="inputEmail4" class="form-label">Name</label>#}
-{#                            <input type="text" class="form-control" id="inputEmail4">#}
-{#                        </div>#}
-{#                        <div class="col-md-6">#}
-{#                            <label for="inputphone" class="form-label">Phone</label>#}
-{#                            <input type="Number" class="form-control" id="inputphone">#}
-{#                        </div>#}
-{#                        <div class="col-md-12">#}
-{#                            <label for="inputEmail4" class="form-label">Email</label>#}
-{#                            <input type="email" class="form-control" id="inputEmail4">#}
-{#                        </div>#}
+                    {#                        <div class="col-md-6">#}
+                    {#                            <label for="inputEmail4" class="form-label">Name</label>#}
+                    {#                            <input type="text" class="form-control" id="inputEmail4">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-md-6">#}
+                    {#                            <label for="inputphone" class="form-label">Phone</label>#}
+                    {#                            <input type="Number" class="form-control" id="inputphone">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-md-12">#}
+                    {#                            <label for="inputEmail4" class="form-label">Email</label>#}
+                    {#                            <input type="email" class="form-control" id="inputEmail4">#}
+                    {#                        </div>#}
 
-{#                        <div class="col-12">#}
-{#                            <label for="inputAddress" class="form-label">Address</label>#}
-{#                            <input type="text" class="form-control" id="inputAddress" placeholder="99 Nguyễn trãi">#}
-{#                        </div>#}
-{#                    </form>#}
+                    {#                        <div class="col-12">#}
+                    {#                            <label for="inputAddress" class="form-label">Address</label>#}
+                    {#                            <input type="text" class="form-control" id="inputAddress" placeholder="99 Nguyễn trãi">#}
+                    {#                        </div>#}
+                    {#                    </form>#}
 
                     <div class="col-12 py-md-3" style="text-align: center">
 
@@ -776,7 +861,7 @@
         </div>
 
     </section>
-{#    <!-- About End -->#}
+    {#    <!-- About End -->#}
 
 
 
@@ -796,12 +881,12 @@
             <i  class="fa-brands fa-youtube"><a href="https://www.youtube.com/watch?v=stHyBrM-dtg"></a></i>
             <i class="fa-brands fa-pinterest-p"></i>
         </div>
-{#        <div class="credit">#}
-{#            <p>Designed By <a href="#">SA Coding</a></p>#}
-{#        </div>#}
-{#        <div class="copyright">#}
-{#            <p>&copy;Copyright SA Coding. All Rights Reserved</p>#}
-{#        </div>#}
+        {#        <div class="credit">#}
+        {#            <p>Designed By <a href="#">SA Coding</a></p>#}
+        {#        </div>#}
+        {#        <div class="copyright">#}
+        {#            <p>&copy;Copyright SA Coding. All Rights Reserved</p>#}
+        {#        </div>#}
     </footer>
     <!-- Footer End -->
 

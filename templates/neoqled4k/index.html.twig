@@ -7,12 +7,229 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
         <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style: none;
+                scroll-behavior: smooth;
+                font-family: 'Lato', sans-serif;
+            }
+
+            /* Navbar Start */
+            #navbar{
+                background: #f9f9f9;
+            }
+            #logo{
+                font-size: 36px;
+                font-weight: 550px;
+                color: black;
+                text-shadow: 0px 1px 1px black;
+                margin-bottom: 5px;
+            }
+            #logo span{
+                color: #ffa500;
+            }
+            .navbar-toggler span{
+                color: #ffa500;
+            }
+            .navbar-nav{
+                margin-left: 20px;
+            }
+            .nav-item .nav-link{
+                font-size: 16px;
+                font-weight: 550;
+                color: black;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                transition: 0.5s ease;
+            }
+            .nav-item .nav-link:hover{
+                background: #ffa500;
+                color: white;
+            }
+            #navbar form button{
+                background: orange;
+                color: white;
+                border: none;
+            }
+            /* Navbar End */
+
+            /* Home Section Start */
+            .home{
+                width: 100%;
+                height: 90vh;
+                background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(Image/background\ img.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .home .content{
+                text-align: center;
+                padding-top: 200px;
+            }
+            .home .content h5{
+                color: white;
+                font-size: 38px;
+                font-weight: 550px;
+                text-shadow: 0px 1px 1px black;
+            }
+            .home .content h1{
+                color: white;
+                font-size: 70px;
+                font-weight: 550;
+                text-shadow: 0px 1px 1px black;
+                margin-top: 5px;
+            }
+            .changecontent::after{
+                content: ' ';
+                color: #ffa500;
+                text-shadow: 0px 1px 1px black;
+                animation: changetext 10s infinite linear;
+            }
+            @keyframes changetext{
+                0%{content: "France";}
+                10%{content: "Spain";}
+                20%{content: "United States";}
+                30%{content: "China";}
+                40%{content: "India";}
+                50%{content: "Pakistan";}
+                60%{content: "Italy";}
+                70%{content: "Turkey";}
+                80%{content: "Mexico";}
+                90%{content: "Germany";}
+                100%{content: "United kingdom";}
+            }
+            .home .content p{
+                color: white;
+                font-size: 15px;
+                font-weight: 600;
+                text-shadow: 0px 1px 1px black;
+                margin-bottom: 30px;
+                margin-top: 5px;
+            }
+            .home .content a{
+                padding: 10px;
+                background: white;
+                color: black;
+                letter-spacing: 2px;
+                font-weight: 550;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+            .home .content a:hover{
+                background: #ffa500;
+                color: white;
+            }
+            @media (max-width:850px){
+                .home{
+                    background-position: 50%;
+                }
+            }
+            @media (max-width:450px){
+                .home .content h5{
+                    font-size: 25px;
+                }
+                .home .content h1{
+                    font-size: 38px;
+                }
+                .home .content p{
+                    font-size: 13px;
+                }
+            }
+            /* Home Section End */
+
+            /* Section Book Start */
+            .book{
+                background: #f9f9f9;
+                padding: 50px;
+            }
+            .main-text h1{
+                text-align: center;
+                text-shadow: 0px 1px 1px black;
+                font-weight: 600;
+            }
+            .main-text h1 span{
+                color: #ffa500;
+            }
+            .book .card{
+                border-radius: 10px;
+                box-shadow: 0px 5px 5px -6px black;
+            }
+            .book .row{
+                margin-top: 30px;
+            }
+            .book form input{
+                padding: 10px;
+                color: black;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                border-radius: 10px;
+                box-shadow: 0px 5px 5px -6px black;
+            }
+            .book form textarea{
+                border: none;
+                border-radius: 10px;
+                resize: none;
+                box-shadow: 0px 5px 5px -6px black;
+                height: 200px;
+            }
+            .book .submit{
+                width: 160px;
+                font-size: 16px;
+                font-weight: 550;
+                background: #ffa500;
+                color: white;
+                margin-top: 10px;
+                transition: 0.5s;
+            }
+            .book .submit:hover{
+                width: 170px;
+            }
+            @media (max-width:765px){
+                .book{
+                    padding: 0;
+                }
+                .main-text h1{
+                    padding: 20px;
+                }
+            }
+            /* Section Book End */
+
+
+
+
+
             /* Section Packages Start */
             .main-txt h1{
                 text-align: center;
                 margin-top: 30px;
                 font-weight: 600;
                 text-shadow: 0px 1px 1px black;
+            }
+            .main-txt-1 btn{
+                width: 190px;
+                height: 38px;
+                border: none;
+                border-radius: 5px;
+                background: #ffa500;
+                color: white;
+                letter-spacing: 2px;
+                font-weight: 550px;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            .main-txt-1 h1{
+                text-align: center;
+                margin-top: 30px;
+                font-weight: 600;
+                text-shadow: 0px 1px 1px black;
+
+            }
+            .main-txt-1 h1 span{
+                color: #ffa500;
             }
             .main-txt h1 span{
                 color: #ffa500;
@@ -50,8 +267,44 @@
                 background: #ffa500;
                 color: white;
                 border-radius: 5px;
+                width: 80px;
+            }
+            .packages .card .card-body a:hover{
+                padding: 12px;
+                color: black;
             }
             /* Section Packages End */
+
+
+
+
+            /* Section Services Start */
+            .services{
+                background: #f9f9f9;
+                margin-top: 50px;
+            }
+            .services .card{
+                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+                border: none;
+                cursor: pointer;
+            }
+            .services .card i{
+                font-size: 80px;
+                text-align: center;
+                color: #ffa500;
+                margin-top: 20px;
+            }
+            .services .card .card-body h3{
+                font-weight: 600;
+            }
+            .services .card .card-body{
+                text-align: center;
+            }
+            /* Section Services End */
+
+
+
+
 
             /* Section Gallary Start */
             .gallary{
@@ -70,6 +323,72 @@
                 transform: scale(1.1);
             }
             /* Section Gallary End */
+
+
+
+
+            /* About Start */
+            .about{
+                padding: 50px;
+                margin-top: 50px;
+                background: #f9f9f9;
+            }
+            .about span{
+                color: #ffa500;
+            }
+
+            .about .card{
+                border-radius: 10px;
+            }
+            .about .card img{
+                border-radius: 10px;
+            }
+            .about h2{
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            .about p{
+                font-weight: 500;
+            }
+            #about-btn{
+                width: 190px;
+                height: 38px;
+                border: none;
+                border-radius: 5px;
+                background: #ffa500;
+                color: white;
+                letter-spacing: 2px;
+                font-weight: 550px;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            #about-btn a{
+                font-size: 16px;
+                font-weight: 550;
+                color: orange;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                transition: 0.5s ease;
+            }
+            #about-btn:hover a{
+
+                background: #ffa500;
+                color: black;
+            }
+            #about-btn:hover{
+                width: 209px;
+                background: #ffa500;
+                color: white;
+            }
+
+            @media (max-width:765px){
+                .about{
+                    padding: 0;
+                }
+            }
+            /* About End */
+
+
 
 
             /* Footer Start */
@@ -105,16 +424,24 @@
             .main-hint li {
                 padding: 10px;
                 text-decoration: none;
-                background: #ffa500;
+                background: light;
                 color: white;
                 border-radius: 15px;
-
+                background-size: 10px;
+            }
+            .main-hint li:hover{
+                padding: 10px;
+                text-decoration: none;
+                background: light;
+                color: white;
+                border-radius: 15px;
+                background-size: 10px;
             }
             .main-hint li a:hover{
                 text-decoration: none;
                 background: #ffa500;
                 color: white;
-                border-radius: 10px;
+                border-radius: 15px;
             }
         </style>
     </head>
@@ -172,12 +499,12 @@
             <div class="main-txt " >
                 <h1 href="{{ path('app_home') }}" role="button"><span  >TV Neo</span>QLED 4k</h1>
             </div>
-            <div class="main-hint col-md-8 ">
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung">OLED</a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic">QLED</a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k">Neo QLED 8K</a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k">Neo QLED 4k</a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry">Crystal UHD</a></li>
+            <div class="main-hint col-md-8 " >
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
+{#                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>#}
+                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
             </div>
 
             <div class="row" style="margin-top: 30px;">
@@ -208,6 +535,107 @@
     <!-- Section Packages End -->
 
 
+    {#    <!-- About Start -->#}
+    <section class="about" id="about">
+        <div class="container">
+
+            <div class="main-txt">
+                <h1>Tìm hiểu thêm <span> về TV</span></h1>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="Image/15.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2>TV thông minh</h2>
+                    <p> TV thông minh hay còn được gọi là Smart tivi là những chiếc tivi chạy trên nền tảng một hệ điều hành do chính nhà sản xuất viết hoặc bên thứ ba cung cấp, kèm theo đó là RAM và bộ nhớ, cho phép bạn dễ dàng kết nối với Internet để tải và sử dụng các ứng dụng như smartphone hoặc máy tính thông thường.</p>
+                    <button id="about-btn" ><a class="btn" style="color: black" href="http://127.0.0.1:8000/ex1">Đọc thêm...</a></button>
+                </div>
+
+            </div>
+
+
+            <div class="row" style="margin-top: 50px;">
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="Image/19.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2>Hướng dẫn mua TV</h2>
+                    <p>5 điều phải biết khi mua TV ...</p>
+                    <button id="about-btn"><a class="btn" style="color: black" href="http://127.0.0.1:8000/ex2">Đọc thêm...</a></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about" id="contant">
+        <div class="container">
+
+            <div class="main-txt py-md-3">
+                <h1><span>Thông tin</span> liên hệ</h1>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="Image/contact-us.jpg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2 style="text-align: center"><span>Thông tin</span> liên hệ</h2>
+                    <h2 style="text-align: center">👇👇👇</h2>
+                    {#                    <p>5 điều phải biết khi mua TV ...</p>#}
+
+                    {#                    <form class="row g-3">#}
+
+                    {#                        <div class="col-md-6">#}
+                    {#                            <label for="inputEmail4" class="form-label">Name</label>#}
+                    {#                            <input type="text" class="form-control" id="inputEmail4">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-md-6">#}
+                    {#                            <label for="inputphone" class="form-label">Phone</label>#}
+                    {#                            <input type="Number" class="form-control" id="inputphone">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-md-12">#}
+                    {#                            <label for="inputEmail4" class="form-label">Email</label>#}
+                    {#                            <input type="email" class="form-control" id="inputEmail4">#}
+                    {#                        </div>#}
+
+                    {#                        <div class="col-12">#}
+                    {#                            <label for="inputAddress" class="form-label">Address</label>#}
+                    {#                            <input type="text" class="form-control" id="inputAddress" placeholder="99 Nguyễn trãi">#}
+                    {#                        </div>#}
+                    {#                    </form>#}
+
+                    <div class="col-12 py-md-3" style="text-align: center">
+
+                        <button type="submit"   id="about-btn">
+                            <li ><a class="btn" href="{{ path('app_contact_new') }}">Nhấn vào đây</a></li>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    {#    <!-- About End -->#}
 
 
     <!-- Footer Start -->

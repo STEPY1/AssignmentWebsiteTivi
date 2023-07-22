@@ -418,9 +418,9 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><span>♈Ru</span>by</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span><i class="fa-solid fa-bars"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="{{ path('app_home') }}">Trang chủ</a>
@@ -435,11 +435,12 @@
 {#                            <a class="nav-link" href="#services">Services</a>#}
 {#                        </li>#}
                         <li class="nav-item">
-                            <a class="nav-link" href="#gallary">Các mẫu TV</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#about">Tìm hiểu thêm về TV</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contant">Liên hệ</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ app.user ? 'logout' : 'login' }}" >{{ app.user ? 'Đăng xuất' : 'Đăng nhập' }}</a>
                         </li>

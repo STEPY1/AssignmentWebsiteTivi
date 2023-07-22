@@ -28,7 +28,7 @@ class NeoQled8kController extends AbstractController
         $category = $this->entityManager->getRepository(Category::class)->findOneBy(['Name' => 'Neo QLED 8K']);
         $products = $productRepository->findBy(['category' => $category]);
 
-        return $this->render('sonic/index.html.twig', [
+        return $this->render('neo_qled8k/index.html.twig', [
             'products' => $products,
         ]);
     }
