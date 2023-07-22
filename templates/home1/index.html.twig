@@ -278,6 +278,7 @@
                 margin-top: 30px;
                 font-weight: 600;
                 text-shadow: 0px 1px 1px black;
+
             }
             .main-txt-1 h1 span{
                 color: #ffa500;
@@ -472,10 +473,6 @@
                 background: #ffa500;
             }
             /* Footer End */
-            .main-hint{
-                background: orange;
-                border-radius: 10px;
-            }
             .main-hint li {
                 padding: 10px;
                 text-decoration: none;
@@ -602,12 +599,17 @@
                 <div class="main-txt py-md-2">
                     <h1 ><span>Tất cả các sản phẩm</span> TV</h1>
                 </div>
-                <div class="main-hint col-md-8 " >
-                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
-                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
-                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
-                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
-                    <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar1">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar1">
+                    <div class="main-hint col-md-12 ">
+                        <li class="col"><a class="btn" href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
+                        <li class="col"><a class="btn" href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
+                        <li class="col"><a class="btn" href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
+                        <li class="col"><a class="btn" href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
+                        <li class="col"><a class="btn" href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
+                    </div>
                 </div>
 
                 <div class="row" style="margin-top: 30px;">
@@ -805,7 +807,7 @@
     </section>
 
 
-    <section class="about" id="about">
+    <section class="about" id="contant">
         <div class="container">
 
             <div class="main-txt py-md-3">

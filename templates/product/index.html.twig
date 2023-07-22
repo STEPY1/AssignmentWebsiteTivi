@@ -34,8 +34,8 @@
                 </td>
                 <td>{{ product.Info }}</td>
                 <td>
-                    <a href="{{ path('app_product_show', {'id': product.id}) }}"><strong>show</strong></a>
-                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
+                    <a class="btn btn-warning" href="{{ path('app_product_show', {'id': product.id}) }}"><strong>show</strong></a>
+                    <a class="btn btn-warning" href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -46,6 +46,6 @@
         </tbody>
     </table>
 
-    <button type="button" class="btn btn-secondary"><a href="{{ path('app_product_new') }}">Create new</a></button>
+    <button type="button" class="btn btn-warning"><a class="btn "href="{{ path('app_product_new') }}">Create new</a></button>
     </body>
 {% endblock %}

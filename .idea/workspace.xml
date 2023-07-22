@@ -3,14 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="46a52e5d-af58-49dd-8ace-757e61ce796c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NeoQled8kController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NeoQled8kController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cry/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cry/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/samsung/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samsung/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sonic/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sonic/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home1/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home1/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +232,7 @@
       <workItem from="1689763653683" duration="21706000" />
       <workItem from="1689818707246" duration="5480000" />
       <workItem from="1689836319900" duration="8230000" />
-      <workItem from="1689984582970" duration="3872000" />
+      <workItem from="1689984582970" duration="7274000" />
     </task>
     <servers />
   </component>
