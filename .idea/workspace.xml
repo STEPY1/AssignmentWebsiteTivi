@@ -3,22 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="46a52e5d-af58-49dd-8ace-757e61ce796c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cry/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cry/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/detail/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ex1/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ex1/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ex2/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ex2/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home1/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home1/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/samsung/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samsung/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sonic/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sonic/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +177,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
@@ -232,7 +229,9 @@
       <workItem from="1689763653683" duration="21706000" />
       <workItem from="1689818707246" duration="5480000" />
       <workItem from="1689836319900" duration="8230000" />
-      <workItem from="1689984582970" duration="7274000" />
+      <workItem from="1689984582970" duration="9418000" />
+      <workItem from="1690178593680" duration="1363000" />
+      <workItem from="1690199931048" duration="4601000" />
     </task>
     <servers />
   </component>
@@ -256,22 +255,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1689752774852" />
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1689749801554">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1690181692012">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1689749801554" />
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1690181692012" />
     <state x="279" y="78" key="SettingsEditor" timestamp="1688978843570">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="279" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1688978843570" />
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1689984582534">
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1690178615024">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1689984582534" />
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1688979645974">
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1690178615024" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1690090427604">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1688979645974" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1690090427604" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
