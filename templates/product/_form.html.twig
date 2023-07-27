@@ -1,4 +1,20 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Lưu') }}</button>
+<div class="form-container">
+    {{ form_start(form) }}
+    <div class="form-group">
+
+       <strong> {{ form_label(form.Name) }}
+        {{ form_widget(form.Name, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_label(form.Price) }}
+        {{ form_widget(form.Price, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_label(form.Info) }}
+        {{ form_widget(form.Info, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_label(form.category) }}
+        {{ form_widget(form.category, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_label(form.image) }}
+        {{ form_widget(form.image, { 'attr': {'class': 'form-control'} }) }}</strong>
+    </div>
+    <button class="btn btn-warning" type="submit">{{ button_label|default('Lưu') }}</button>
+    {{ form_end(form) }}
+</div>
 {{ form_end(form) }}

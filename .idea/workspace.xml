@@ -3,19 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="46a52e5d-af58-49dd-8ace-757e61ce796c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cry/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cry/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detail/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ex1/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ex1/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ex2/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ex2/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home1/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home1/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neo_qled8k/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/neoqled4k/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/samsung/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samsung/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sonic/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sonic/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +256,10 @@
       <workItem from="1689836319900" duration="8230000" />
       <workItem from="1689984582970" duration="9418000" />
       <workItem from="1690178593680" duration="1363000" />
-      <workItem from="1690199931048" duration="4601000" />
+      <workItem from="1690199931048" duration="5445000" />
+      <workItem from="1690287637351" duration="2686000" />
+      <workItem from="1690351696270" duration="15735000" />
+      <workItem from="1690425118526" duration="2051000" />
     </task>
     <servers />
   </component>
@@ -263,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="279" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1688978843570" />
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1690178615024">
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1690425165841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1690178615024" />
+    <state x="477" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1690425165841" />
     <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1690090427604">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -10,6 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\File;
+
+
 #[Route('/product')]
 class ProductController extends AbstractController
 {
@@ -29,16 +33,40 @@ class ProductController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $imageFile = $form->get('image')->getData();
+
+            if ($imageFile) {
+                $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $newFilename = $originalFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+
+                try {
+                    $imageFile->move(
+                        $this->getParameter('product_image_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // Xử lý ngoại lệ khi không thể di chuyển tệp
+                }
+
+                $product->setImage($newFilename);
+            } else {
+                // Gán giá trị null cho thuộc tính image
+                $product->setImage(null);
+            }
+
             $productRepository->save($product, true);
 
             return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('product/new.html.twig', [
+        return $this->render('product/new.html.twig', [
             'product' => $product,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
+
+
+
 
     #[Route('/{id}', name: 'app_product_show', methods: ['GET'])]
     public function show(Product $product): Response
@@ -55,14 +83,34 @@ class ProductController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $productRepository->save($product, true);
+            $imageFile = $form->get('image')->getData();
 
+            if ($imageFile) {
+                $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $newFilename = $originalFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+
+                try {
+                    $imageFile->move(
+                        $this->getParameter('product_image_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // Xử lý ngoại lệ khi không thể di chuyển tệp
+                }
+
+                $product->setImage($newFilename);
+            } else {
+                // Gán giá trị null cho thuộc tính image
+                $product->setImage(null);
+            }
+
+            $productRepository->save($product, true);
             return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('product/edit.html.twig', [
+        return $this->render('product/edit.html.twig', [
             'product' => $product,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
