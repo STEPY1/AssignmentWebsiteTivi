@@ -1,449 +1,492 @@
-{% extends 'base.html.twig' %}
 
 
 
 {% block body %}
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            list-style: none;
-            scroll-behavior: smooth;
-            font-family: 'Lato', sans-serif;
-        }
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-        /* Navbar Start */
-        #navbar{
-            background: #f9f9f9;
-        }
-        #logo{
-            font-size: 36px;
-            font-weight: 550px;
-            color: black;
-            text-shadow: 0px 1px 1px black;
-            margin-bottom: 5px;
-        }
-        #logo span{
-            color: #ffa500;
-        }
-        .navbar-toggler span{
-            color: #ffa500;
-        }
-        .navbar-nav{
-            margin-left: 20px;
-        }
-        .nav-item .nav-link{
-            font-size: 16px;
-            font-weight: 550;
-            color: black;
-            letter-spacing: 1px;
-            border-radius: 3px;
-            transition: 0.5s ease;
-        }
-        .nav-item .nav-link:hover{
-            background: #ffa500;
-            color: white;
-        }
-        #navbar form button{
-            background: orange;
-            color: white;
-            border: none;
-        }
-        /* Navbar End */
-
-        /* Home Section Start */
-        .home{
-            width: 100%;
-            height: 90vh;
-            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(Image/background\ img.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .home .content{
-            text-align: center;
-            padding-top: 200px;
-        }
-        .home .content h5{
-            color: white;
-            font-size: 38px;
-            font-weight: 550px;
-            text-shadow: 0px 1px 1px black;
-        }
-        .home .content h1{
-            color: white;
-            font-size: 70px;
-            font-weight: 550;
-            text-shadow: 0px 1px 1px black;
-            margin-top: 5px;
-        }
-        .changecontent::after{
-            content: ' ';
-            color: #ffa500;
-            text-shadow: 0px 1px 1px black;
-            animation: changetext 10s infinite linear;
-        }
-        @keyframes changetext{
-            0%{content: "France";}
-            10%{content: "Spain";}
-            20%{content: "United States";}
-            30%{content: "China";}
-            40%{content: "India";}
-            50%{content: "Pakistan";}
-            60%{content: "Italy";}
-            70%{content: "Turkey";}
-            80%{content: "Mexico";}
-            90%{content: "Germany";}
-            100%{content: "United kingdom";}
-        }
-        .home .content p{
-            color: white;
-            font-size: 15px;
-            font-weight: 600;
-            text-shadow: 0px 1px 1px black;
-            margin-bottom: 30px;
-            margin-top: 5px;
-        }
-        .home .content a{
-            padding: 10px;
-            background: white;
-            color: black;
-            letter-spacing: 2px;
-            font-weight: 550;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.5s;
-        }
-        .home .content a:hover{
-            background: #ffa500;
-            color: white;
-        }
-        @media (max-width:850px){
-            .home{
-                background-position: 50%;
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style: none;
+                scroll-behavior: smooth;
+                font-family: 'Lato', sans-serif;
             }
-        }
-        @media (max-width:450px){
+
+            /* Navbar Start */
+            #navbar{
+                background: #f9f9f9;
+            }
+            #logo{
+                font-size: 36px;
+                font-weight: 550px;
+                color: black;
+                text-shadow: 0px 1px 1px black;
+                margin-bottom: 5px;
+            }
+            #logo span{
+                color: #ffa500;
+            }
+            .navbar-toggler span{
+                color: #ffa500;
+            }
+            .navbar-nav{
+                margin-left: 20px;
+            }
+            .nav-item .nav-link{
+                font-size: 16px;
+                font-weight: 550;
+                color: black;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                transition: 0.5s ease;
+            }
+            .nav-item .nav-link:hover{
+                background: #ffa500;
+                color: white;
+            }
+            #navbar form button{
+                background: orange;
+                color: white;
+                border: none;
+            }
+            /* Navbar End */
+
+            /* Home Section Start */
+            .home{
+                width: 100%;
+                height: 90vh;
+                background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(Image/background\ img.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .home .content{
+                text-align: center;
+                padding-top: 200px;
+            }
             .home .content h5{
-                font-size: 25px;
+                color: white;
+                font-size: 38px;
+                font-weight: 550px;
+                text-shadow: 0px 1px 1px black;
             }
             .home .content h1{
-                font-size: 38px;
+                color: white;
+                font-size: 70px;
+                font-weight: 550;
+                text-shadow: 0px 1px 1px black;
+                margin-top: 5px;
+            }
+            .changecontent::after{
+                content: ' ';
+                color: #ffa500;
+                text-shadow: 0px 1px 1px black;
+                animation: changetext 10s infinite linear;
+            }
+            @keyframes changetext{
+                0%{content: "France";}
+                10%{content: "Spain";}
+                20%{content: "United States";}
+                30%{content: "China";}
+                40%{content: "India";}
+                50%{content: "Pakistan";}
+                60%{content: "Italy";}
+                70%{content: "Turkey";}
+                80%{content: "Mexico";}
+                90%{content: "Germany";}
+                100%{content: "United kingdom";}
             }
             .home .content p{
-                font-size: 13px;
+                color: white;
+                font-size: 15px;
+                font-weight: 600;
+                text-shadow: 0px 1px 1px black;
+                margin-bottom: 30px;
+                margin-top: 5px;
             }
-        }
-        /* Home Section End */
+            .home .content a{
+                padding: 10px;
+                background: white;
+                color: black;
+                letter-spacing: 2px;
+                font-weight: 550;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+            .home .content a:hover{
+                background: #ffa500;
+                color: white;
+            }
+            @media (max-width:850px){
+                .home{
+                    background-position: 50%;
+                }
+            }
+            @media (max-width:450px){
+                .home .content h5{
+                    font-size: 25px;
+                }
+                .home .content h1{
+                    font-size: 38px;
+                }
+                .home .content p{
+                    font-size: 13px;
+                }
+            }
+            /* Home Section End */
 
-        /* Section Book Start */
-        .book{
-            background: #f9f9f9;
-            padding: 50px;
-        }
-        .main-text h1{
-            text-align: center;
-            text-shadow: 0px 1px 1px black;
-            font-weight: 600;
-        }
-        .main-text h1 span{
-            color: #ffa500;
-        }
-        .book .card{
-            border-radius: 10px;
-            box-shadow: 0px 5px 5px -6px black;
-        }
-        .book .row{
-            margin-top: 30px;
-        }
-        .book form input{
-            padding: 10px;
-            color: black;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 5px -6px black;
-        }
-        .book form textarea{
-            border: none;
-            border-radius: 10px;
-            resize: none;
-            box-shadow: 0px 5px 5px -6px black;
-            height: 200px;
-        }
-        .book .submit{
-            width: 160px;
-            font-size: 16px;
-            font-weight: 550;
-            background: #ffa500;
-            color: white;
-            margin-top: 10px;
-            transition: 0.5s;
-        }
-        .book .submit:hover{
-            width: 170px;
-        }
-        @media (max-width:765px){
+            /* Section Book Start */
             .book{
-                padding: 0;
+                background: #f9f9f9;
+                padding: 50px;
             }
             .main-text h1{
-                padding: 20px;
+                text-align: center;
+                text-shadow: 0px 1px 1px black;
+                font-weight: 600;
             }
-        }
-        /* Section Book End */
+            .main-text h1 span{
+                color: #ffa500;
+            }
+            .book .card{
+                border-radius: 10px;
+                box-shadow: 0px 5px 5px -6px black;
+            }
+            .book .row{
+                margin-top: 30px;
+            }
+            .book form input{
+                padding: 10px;
+                color: black;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                border-radius: 10px;
+                box-shadow: 0px 5px 5px -6px black;
+            }
+            .book form textarea{
+                border: none;
+                border-radius: 10px;
+                resize: none;
+                box-shadow: 0px 5px 5px -6px black;
+                height: 200px;
+            }
+            .book .submit{
+                width: 160px;
+                font-size: 16px;
+                font-weight: 550;
+                background: #ffa500;
+                color: white;
+                margin-top: 10px;
+                transition: 0.5s;
+            }
+            .book .submit:hover{
+                width: 170px;
+            }
+            @media (max-width:765px){
+                .book{
+                    padding: 0;
+                }
+                .main-text h1{
+                    padding: 20px;
+                }
+            }
+            /* Section Book End */
 
 
 
 
 
-        /* Section Packages Start */
-        .main-txt h1{
-            text-align: center;
-            margin-top: 30px;
-            font-weight: 600;
-            text-shadow: 0px 1px 1px black;
-        }
-        .main-txt-1 btn{
-            width: 190px;
-            height: 38px;
-            border: none;
-            border-radius: 5px;
-            background: #ffa500;
-            color: white;
-            letter-spacing: 2px;
-            font-weight: 550px;
-            transition: 0.5s ease;
-            cursor: pointer;
-        }
-        .main-txt-1 h1{
-            text-align: center;
-            margin-top: 30px;
-            font-weight: 600;
-            text-shadow: 0px 1px 1px black;
+            /* Section Packages Start */
+            .main-txt h1{
+                text-align: center;
+                margin-top: 30px;
+                font-weight: 600;
+                text-shadow: 0px 1px 1px black;
+            }
+            .main-txt-1 btn{
+                width: 190px;
+                height: 38px;
+                border: none;
+                border-radius: 5px;
+                background: #ffa500;
+                color: white;
+                letter-spacing: 2px;
+                font-weight: 550px;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            .main-txt-1 h1{
+                text-align: center;
+                margin-top: 30px;
+                font-weight: 600;
+                text-shadow: 0px 1px 1px black;
 
-        }
-        .main-txt-1 h1 span{
-            color: #ffa500;
-        }
-        .main-txt h1 span{
-            color: #ffa500;
-        }
-        .packages .card{
-            border-radius: 5px;
-            border: none;
-            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-        }
-        .packages .card img{
-            border-radius: 5px;
-        }
-        .packages .card .card-body{
-            background: transparent;
-        }
-        .packages .card .card-body h3{
-            font-size: 25px;
-            font-weight: 600;
-        }
-        .packages .card .card-body p{
-            font-size: 15px;
-        }
-        .checked{
-            color: #ffa500;
-        }
-        .star i{
-            font-size: 15px;
-        }
-        .packages .card .card-body h6{
-            font-size: 20px;
-        }
-        .packages .card .card-body a{
-            padding: 10px;
-            text-decoration: none;
-            background: #ffa500;
-            color: white;
-            border-radius: 5px;
-            width: 80px;
-        }
-        .packages .card .card-body a:hover{
-            padding: 12px;
-            color: black;
-        }
-        /* Section Packages End */
-
-
-
-
-        /* Section Services Start */
-        .services{
-            background: #f9f9f9;
-            margin-top: 50px;
-        }
-        .services .card{
-            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-            border: none;
-            cursor: pointer;
-        }
-        .services .card i{
-            font-size: 80px;
-            text-align: center;
-            color: #ffa500;
-            margin-top: 20px;
-        }
-        .services .card .card-body h3{
-            font-weight: 600;
-        }
-        .services .card .card-body{
-            text-align: center;
-        }
-        /* Section Services End */
+            }
+            .main-txt-1 h1 span{
+                color: #ffa500;
+            }
+            .main-txt h1 span{
+                color: #ffa500;
+            }
+            .packages .card{
+                border-radius: 5px;
+                border: none;
+                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+            }
+            .packages .card img{
+                border-radius: 5px;
+            }
+            .packages .card .card-body{
+                background: transparent;
+            }
+            .packages .card .card-body h3{
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .packages .card .card-body p{
+                font-size: 15px;
+            }
+            .checked{
+                color: #ffa500;
+            }
+            .star i{
+                font-size: 15px;
+            }
+            .packages .card .card-body h6{
+                font-size: 20px;
+            }
+            .packages .card .card-body a{
+                padding: 10px;
+                text-decoration: none;
+                background: #ffa500;
+                color: white;
+                border-radius: 5px;
+                width: 80px;
+            }
+            .packages .card .card-body a:hover{
+                padding: 12px;
+                color: black;
+            }
+            /* Section Packages End */
 
 
 
 
+            /* Section Services Start */
+            .services{
+                background: #f9f9f9;
+                margin-top: 50px;
+            }
+            .services .card{
+                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+                border: none;
+                cursor: pointer;
+            }
+            .services .card i{
+                font-size: 80px;
+                text-align: center;
+                color: #ffa500;
+                margin-top: 20px;
+            }
+            .services .card .card-body h3{
+                font-weight: 600;
+            }
+            .services .card .card-body{
+                text-align: center;
+            }
+            /* Section Services End */
 
-        /* Section Gallary Start */
-        .gallary{
-            margin-top: 50px;
-        }
-        .gallary .card{
-            border-radius: 10px;
-            box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-            cursor: pointer;
-        }
-        .gallary .card img{
-            border-radius: 10px;
-            transition: 0.5s;
-        }
-        .gallary .card img:hover{
-            transform: scale(1.1);
-        }
-        /* Section Gallary End */
 
 
 
 
-        /* About Start */
-        .about{
-            padding: 50px;
-            margin-top: 50px;
-            background: #f9f9f9;
-        }
-        .about span{
-            color: #ffa500;
-        }
+            /* Section Gallary Start */
+            .gallary{
+                margin-top: 50px;
+            }
+            .gallary .card{
+                border-radius: 10px;
+                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+                cursor: pointer;
+            }
+            .gallary .card img{
+                border-radius: 10px;
+                transition: 0.5s;
+            }
+            .gallary .card img:hover{
+                transform: scale(1.1);
+            }
+            /* Section Gallary End */
 
-        .about .card{
-            border-radius: 10px;
-        }
-        .about .card img{
-            border-radius: 10px;
-        }
-        .about h2{
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        .about p{
-            font-weight: 500;
-        }
-        #about-btn{
-            width: 190px;
-            height: 38px;
-            border: none;
-            border-radius: 5px;
-            background: #ffa500;
-            color: white;
-            letter-spacing: 2px;
-            font-weight: 550px;
-            transition: 0.5s ease;
-            cursor: pointer;
-        }
-        #about-btn a{
-            font-size: 16px;
-            font-weight: 550;
-            color: orange;
-            letter-spacing: 1px;
-            border-radius: 3px;
-            transition: 0.5s ease;
-        }
-        #about-btn:hover a{
 
-            background: #ffa500;
-            color: black;
-        }
-        #about-btn:hover{
-            width: 209px;
-            background: #ffa500;
-            color: white;
-        }
 
-        @media (max-width:765px){
+
+            /* About Start */
             .about{
-                padding: 0;
+                padding: 50px;
+                margin-top: 50px;
+                background: #f9f9f9;
             }
-        }
-        /* About End */
+            .about span{
+                color: #ffa500;
+            }
+
+            .about .card{
+                border-radius: 10px;
+            }
+            .about .card img{
+                border-radius: 10px;
+            }
+            .about h2{
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            .about p{
+                font-weight: 500;
+            }
+            #about-btn{
+                width: 190px;
+                height: 38px;
+                border: none;
+                border-radius: 5px;
+                background: #ffa500;
+                color: white;
+                letter-spacing: 2px;
+                font-weight: 550px;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            #about-btn a{
+                font-size: 16px;
+                font-weight: 550;
+                color: orange;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                transition: 0.5s ease;
+            }
+            #about-btn:hover a{
+
+                background: #ffa500;
+                color: black;
+            }
+            #about-btn:hover{
+                width: 209px;
+                background: #ffa500;
+                color: white;
+            }
+
+            @media (max-width:765px){
+                .about{
+                    padding: 0;
+                }
+            }
+            /* About End */
 
 
 
 
-        /* Footer Start */
-        #footer{
-            width: 100%;
-            margin-top: 150px;
-            text-align: center;
-            background: #f9f9f9;
-        }
-        #footer h1{
-            font-weight: 600;
-            padding-top: 30px;
-            text-shadow: 0px 0px 1px black;
-        }
-        #footer h1 span{
-            color: #ffa500;
-        }
-        .social-links i{
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 20px;
-            background: black;
-            color: white;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            transition: 0.5s ease;
-            cursor: pointer;
-        }
-        .social-links i:hover{
-            background: #ffa500;
-        }
-        /* Footer End */
-        .main-hint li {
-            padding: 10px;
-            text-decoration: none;
-            background: light;
-            color: white;
-            border-radius: 15px;
-            background-size: 10px;
-        }
-        .main-hint li:hover{
-            padding: 10px;
-            text-decoration: none;
-            background: light;
-            color: white;
-            border-radius: 15px;
-            background-size: 10px;
-        }
-        .main-hint li a:hover{
-            text-decoration: none;
-            background: #ffa500;
-            color: white;
-            border-radius: 15px;
-        }
-    </style>
+            /* Footer Start */
+            #footer{
+                width: 100%;
+                margin-top: 150px;
+                text-align: center;
+                background: #f9f9f9;
+            }
+            #footer h1{
+                font-weight: 600;
+                padding-top: 30px;
+                text-shadow: 0px 0px 1px black;
+            }
+            #footer h1 span{
+                color: #ffa500;
+            }
+            .social-links i{
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                background: black;
+                color: white;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            .social-links i:hover{
+                background: #ffa500;
+            }
+            /* Footer End */
+            .main-hint li {
+                padding: 10px;
+                text-decoration: none;
+                background: light;
+                color: white;
+                border-radius: 15px;
+                background-size: 10px;
+            }
+            .main-hint li:hover{
+                padding: 10px;
+                text-decoration: none;
+                background: light;
+                color: white;
+                border-radius: 15px;
+                background-size: 10px;
+            }
+            .main-hint li a:hover{
+                text-decoration: none;
+                background: #ffa500;
+                color: white;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
     <body>
+    {% block header %}
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><strong><span>♈Ru</span>by</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+
+                    <ul class="navbar-nav me-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ path('app_user_index') }}">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_product_index') }}">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_contact_index') }}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_category_index') }}">Category</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Tìm kiếm</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    {%  endblock %}
     <section class="main-txt">
-    <h1>Chỉnh sửa sản phẩm</h1>
+        <h1><span>Chỉnh sửa</span> sản phẩm</h1>
     </section>
     <section class="container"><a class="btn btn-warning" href="{{ path('app_product_index') }}">Quay trở lại</a>
 

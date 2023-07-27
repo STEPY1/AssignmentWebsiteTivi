@@ -394,26 +394,6 @@
     <body>
 
     {% block header %}
-{#        <nav>#}
-{#            <div class="nav__logo">️🎯Ruby<span>.🇻🇳</span></div>#}
-{#            <ul class="nav__links">#}
-{#                <li class="link"><a href="{{ path('app_home') }}">Home</a></li>#}
-{#                <li class="link">#}
-{#                    <a href="#">Product </a>#}
-{#                    <ul class="dropdown">#}
-{#                        <li class="link"><a href="http://127.0.0.1:8000/samsung">OLED</a></li>#}
-{#                        <li class="link"><a href="http://127.0.0.1:8000/sonic">QLED</a></li>#}
-{#                        <li class="link"><a href="http://127.0.0.1:8000/neo_qled8k">QLED-8K</a></li>#}
-{#                        <li class="link"><a href="http://127.0.0.1:8000/neoqled4k">QLED-4K</a></li>#}
-{#                        <li class="link"><a href="http://127.0.0.1:8000/cry">Crystal</a></li>#}
-{#                    </ul>#}
-{#                </li>#}
-{#                <li class="link"><a href="/{{ app.user ? 'logout' : 'login' }}" >{{ app.user ? 'Logout' : 'Login' }}</a></li>#}
-{#            </ul>#}
-{#        </nav>#}
-
-
-
         <nav class="navbar navbar-expand-lg" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><span>♈Ru</span>by</a>
@@ -425,18 +405,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="{{ path('app_home') }}">Trang chủ</a>
                         </li>
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#book">Book</a>#}
-{#                        </li>#}
                         <li class="nav-item">
-                            <a class="nav-link" href="#packages">Tất cả các dòng TV</a>
+                            <a class="nav-link" href="{{ path('app_home_1') }}">Tất cả các sản phẩm TV</a>
                         </li>
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#services">Services</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#about">Tìm hiểu thêm về TV</a>#}
-{#                        </li>#}
                         <li class="nav-item">
                             <a class="nav-link" href="#contant">Liên hệ</a>
                         </li>
@@ -444,7 +415,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ app.user ? 'logout' : 'login' }}" >{{ app.user ? 'Đăng xuất' : 'Đăng nhập' }}</a>
                         </li>
-
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="text" placeholder="Search">
