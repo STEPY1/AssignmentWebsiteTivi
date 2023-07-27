@@ -41,11 +41,12 @@ class ProductRepository extends ServiceEntityRepository
     public function searchByKeyword(string $keyword): array
     {
         $qb = $this->createQueryBuilder('p');
-        $qb->andWhere($qb->expr()->like('p.title', ':keyword'))
+        $qb->andWhere($qb->expr()->like('p.Name', ':keyword'))
             ->setParameter('keyword', '%' . $keyword . '%');
 
         return $qb->getQuery()->getResult();
     }
+
 
 //    /**
 //     * @return Product[] Returns an array of Product objects

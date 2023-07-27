@@ -1,7 +1,10 @@
-
-{% extends 'base1.html.twig' %}
-{% block body %}
+<!DOCTYPE html>
+<html>
     <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Goolge dịch{% endblock %}</title>
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -9,6 +12,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
         <style>
             *{
                 margin: 0;
@@ -26,7 +36,7 @@
             }
             #logo{
                 font-size: 36px;
-                font-weight: 550px;
+                font-weight: 550;
                 color: black;
                 text-shadow: 0px 1px 1px black;
                 margin-bottom: 5px;
@@ -40,8 +50,9 @@
             .navbar-nav{
                 margin-left: 20px;
             }
-            .nav-item .nav-link{
-                font-size: 16px;
+
+            .nav-item a.nav-link{
+                font-size: 18px;
                 font-weight: 550;
                 color: black;
                 letter-spacing: 1px;
@@ -212,28 +223,6 @@
                 font-weight: 600;
                 text-shadow: 0px 1px 1px black;
             }
-            .main-txt-1 btn{
-                width: 190px;
-                height: 38px;
-                border: none;
-                border-radius: 5px;
-                background: #ffa500;
-                color: white;
-                letter-spacing: 2px;
-                font-weight: 550px;
-                transition: 0.5s ease;
-                cursor: pointer;
-            }
-            .main-txt-1 h1{
-                text-align: center;
-                margin-top: 30px;
-                font-weight: 600;
-                text-shadow: 0px 1px 1px black;
-
-            }
-            .main-txt-1 h1 span{
-                color: #ffa500;
-            }
             .main-txt h1 span{
                 color: #ffa500;
             }
@@ -270,11 +259,6 @@
                 background: #ffa500;
                 color: white;
                 border-radius: 5px;
-                width: 80px;
-            }
-            .packages .card .card-body a:hover{
-                padding: 12px;
-                color: black;
             }
             /* Section Packages End */
 
@@ -336,10 +320,6 @@
                 margin-top: 50px;
                 background: #f9f9f9;
             }
-            .about span{
-                color: #ffa500;
-            }
-
             .about .card{
                 border-radius: 10px;
             }
@@ -354,36 +334,20 @@
                 font-weight: 500;
             }
             #about-btn{
-                width: 190px;
+                width: 150px;
                 height: 38px;
                 border: none;
                 border-radius: 5px;
                 background: #ffa500;
                 color: white;
                 letter-spacing: 2px;
-                font-weight: 550px;
+                font-weight: 550;
                 transition: 0.5s ease;
                 cursor: pointer;
             }
-            #about-btn a{
-                font-size: 16px;
-                font-weight: 550;
-                color: orange;
-                letter-spacing: 1px;
-                border-radius: 3px;
-                transition: 0.5s ease;
-            }
-            #about-btn:hover a{
-
-                background: #ffa500;
-                color: black;
-            }
             #about-btn:hover{
-                width: 209px;
-                background: #ffa500;
-                color: white;
+                width: 170px;
             }
-
             @media (max-width:765px){
                 .about{
                     padding: 0;
@@ -424,52 +388,89 @@
                 background: #ffa500;
             }
             /* Footer End */
-            .main-hint li {
-                padding: 10px;
-                text-decoration: none;
-                background: light;
-                color: white;
-                border-radius: 15px;
-                background-size: 10px;
-            }
-            .main-hint li:hover{
-                padding: 10px;
-                text-decoration: none;
-                background: light;
-                color: white;
-                border-radius: 15px;
-                background-size: 10px;
-            }
-            .main-hint li a:hover{
-                text-decoration: none;
-                background: #ffa500;
-                color: white;
-                border-radius: 15px;
-            }
+
         </style>
     </head>
     <body>
 
-    <section class="main-txt">
-    <h1><span><strong>Category</strong></span></h1>
-    </section>
-    <section class="container">
-        <a class="btn btn-warning" href="{{ path('app_category_index') }}">back to list</a>
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ category.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ category.Name }}</td>
-            </tr>
-        </tbody>
-    </table>
+    {% block header %}
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><span>♈Ru</span>by</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav me-auto">
 
-    <a class="btn btn-warning" href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
-    {{ include('category/_delete_form.html.twig') }}
-    </section>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ path('app_user_index') }}">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_product_index') }}">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_contact_index') }}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_category_index') }}">Category</a>
+                            </li>
+
+                        </ul>
+{#                        <form class="d-flex" action="{{ path('app_result') }}" method="GET">#}
+{#                            <input class="form-control me-2" type="search" placeholder="Search" required>#}
+{#                            <button class="btn btn-primary" type="submit">Tìm kiếm</button>#}
+{#                        </form>#}
+
+                </div>
+            </div>
+        </nav>
+    {%  endblock %}
+    {% block body %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+    {% endblock %}
     </body>
-{% endblock %}
+
+
+</html>

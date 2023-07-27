@@ -1,14 +1,62 @@
+{% extends 'base.html.twig' %}
 
-{% extends 'base1.html.twig' %}
 {% block body %}
+    {#    <body>#}
+    {#    <section class="section__container destination__container">#}
+    {#        <div class="section__header">#}
+    {#            <div>#}
+    {#            <h2 class="section__title">Tivi products</h2>#}
+    {#            <p class="section__subtitle">ALL Product</p>#}
+    {#            </div>#}
+
+    {#        </div>#}
+    {#    <div class="destination__grid">#}
+    {#        {% for product in products %}#}
+    {#            <a href="{{ path('app_detail_show', {'id': product.id}) }}">#}
+    {#                <div class="destination__card">#}
+    {#                    <div>#}
+    {#                        <img src={{ asset('image/' ~ product.getImage()) }}   alt="{{ product.getName() }}">#}
+    {#                        <div class="destination__details">#}
+    {#                            <p class="destination__title">{{ product.getName() }}</p>#}
+    {#                            <p class="destination__subtitle">{{ product.getInfo() }}</p>#}
+    {#                            <p class="booking__price">Giá: {{ product.getPrice() }}$</p>#}
+    {#                        </div>#}
+
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </a>#}
+
+
+    {#        {% endfor %}#}
+    {#    </div>#}
+    {#    </section>#}
+    {#    </body>#}
+
+
+
+
+
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Website</title>
+
+        <!-- Bootstrap Link -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
+        <!-- Bootstrap Link -->
+
+
+        <!-- Font Awesome Cdn -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <!-- Font Awesome Cdn -->
+
+
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-
+        <!-- Google Fonts -->
         <style>
             *{
                 margin: 0;
@@ -447,29 +495,249 @@
                 border-radius: 15px;
             }
         </style>
+
+
     </head>
+
+
+
     <body>
 
-    <section class="main-txt">
-    <h1><span><strong>Category</strong></span></h1>
-    </section>
-    <section class="container">
-        <a class="btn btn-warning" href="{{ path('app_category_index') }}">back to list</a>
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ category.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ category.Name }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <a class="btn btn-warning" href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
-    {{ include('category/_delete_form.html.twig') }}
+    <!-- Section Packages Start -->
+    <section class="packages" id="packages">
+        <div class="container">
+
+            <div class="main-txt py-md-2">
+                <h1 >Kết quả <span>tìm kiếm</span></h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar1">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar1">
+                <div class="main-hint col-md-12 ">
+                    <li class="col"><a class="btn" href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
+                    <li class="col"><a class="btn" href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
+                    <li class="col"><a class="btn" href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
+                    <li class="col"><a class="btn" href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
+                    <li class="col"><a class="btn" href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+
+                {% for product in products %}
+                    <div class="col-md-4 py-5 py-md-2"   >
+                        <div class="card">
+                            <img src="{{ asset('image/' ~ product.getImage()) }}"  alt={{ product.getName() }}>
+                            <div class="card-body">
+                                <h3>{{ product.getName() }}</h3>
+                                {#                            <p>{{ product.getInfo() }}</p>#}
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked "></i>
+                                    <i class="fa-solid fa-star "></i>
+                                </div>
+                                <h6>Giá: <strong>{{ product.getPrice() }} vnđ</strong></h6>
+                                <a href="{{ path('app_detail_show', {'id': product.id}) }} "><strong>Thông tin sản phẩm</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+{#            <div class="main-txt-1 py-md-2">#}
+{#                <h1><a role="button" class="btn btn-outline-warning" style="color: black" ><strong>Kết quả<span> tìm kiếm</span></strong></a></h1>#}
+{#            </div>#}
+        </div>
+
     </section>
+    <!-- Section Packages End -->
+
+    {#    <!-- Section Services Start -->#}
+    {#    <section class="services" id="services">#}
+    {#        <div class="container">#}
+
+    {#            <div class="main-txt">#}
+    {#                <h1><span>S</span>ervices</h1>#}
+    {#            </div>#}
+
+    {#            <div class="row" style="margin-top: 30px;">#}
+
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-hotel"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Affordable Hotel</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-utensils"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Food & Drinks</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-bullhorn"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Safty Guide</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+
+
+
+    {#            </div>#}
+
+
+    {#            <div class="row" style="margin-top: 30px;">#}
+
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-globe-asia"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Around The World</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-plane"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Fastest Travel</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+    {#                <div class="col-md-4 py-3 py-md-0">#}
+
+    {#                    <div class="card">#}
+    {#                        <i class="fas fa-hiking"></i>#}
+    {#                        <div class="card-body">#}
+    {#                            <h3>Adventures</h3>#}
+    {#                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>#}
+    {#                        </div>#}
+    {#                    </div>#}
+
+    {#                </div>#}
+
+
+
+    {#            </div>#}
+
+    {#        </div>#}
+    {#    </section>#}
+    {#    <!-- Section Services End -->#}
+
+    {% if app.user %}
+        <!-- Section Gallary Start -->
+        {#    <section class="gallary" id="gallary">#}
+        {#        <div class="container">#}
+
+        {#            <div class="main-txt">#}
+        {#                <h1><span>Các mẫu </span>TV</h1>#}
+        {#            </div>#}
+
+        {#            <div class="row" style="margin-top: 30px;">#}
+        {#                {% for product in products %}#}
+        {#                    <a class="col-md-4 py-100 py-md-2" href="{{ path('app_detail_show', {'id': product.id}) }} ">#}
+        {#                        <div class="">#}
+        {#                            <div class="card" >#}
+        {#                                <img src={{ asset('image/' ~ product.getImage()) }} alt="{{ product.getName() }}" height="230px">#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </a>#}
+        {#                {% endfor %}#}
+        {#            </div>#}
+        {#        </div>#}
+        {#    </section>#}
+        <!-- Section Gallary End -->
+    {% endif %}
+
+
+    {#    <!-- About Start -->#}
+
+    <section class="about" id="contant">
+        <div class="container">
+
+            <div class="main-txt py-md-3">
+                <h1><span>Thông tin</span> liên hệ</h1>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="Image/contact-us.jpg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2 style="text-align: center"><span>Thông tin</span> liên hệ</h2>
+                    <h2 style="text-align: center">👇👇👇</h2>
+                    <div class="col-12 py-md-3" style="text-align: center">
+                        <button type="submit"   id="about-btn">
+                            <li ><a class="btn" href="{{ path('app_contact_new') }}"><<< Click me >>></a></li>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    {#    <!-- About End -->#}
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <footer id="footer">
+        <h1><span>♈Ru</span>by</h1>
+        <p>Thông tin liên hệ</p>
+        <div class="social-links">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"><a href="https://www.facebook.com/profile.php?id=100092994345599"></a></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i  class="fa-brands fa-youtube"><a href="https://www.youtube.com/watch?v=stHyBrM-dtg"></a></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+        {#        <div class="credit">#}
+        {#            <p>Designed By <a href="#">SA Coding</a></p>#}
+        {#        </div>#}
+        {#        <div class="copyright">#}
+        {#            <p>&copy;Copyright SA Coding. All Rights Reserved</p>#}
+        {#        </div>#}
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     </body>
 {% endblock %}

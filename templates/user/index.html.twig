@@ -1,4 +1,4 @@
-<html>
+{% extends 'base1.html.twig' %}
 {% block body %}
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -448,41 +448,7 @@
     </style>
     </head>
     <body>
-    {% block header %}
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><strong><span>♈Ru</span>by</strong></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span><i class="fa-solid fa-bars"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
 
-                    <ul class="navbar-nav me-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{ path('app_user_index') }}">User</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_product_index') }}">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_contact_index') }}">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_category_index') }}">Category</a>
-                        </li>
-
-                    </ul>
-
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                        <button class="btn btn-primary" type="button">Tìm kiếm</button>
-                    </form>
-
-                </div>
-            </div>
-        </nav>
-    {%  endblock %}
     <section class="main-txt">
         <div>
         <h1><span>Tài khoản </span>người dùng</h1>
@@ -534,6 +500,6 @@
     </body>
 
 {% endblock %}
-</html>
+
 
 

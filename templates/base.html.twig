@@ -55,7 +55,7 @@
                 font-size: 18px;
                 font-weight: 550;
                 color: black;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
                 border-radius: 3px;
                 transition: 0.5s ease;
             }
@@ -416,10 +416,10 @@
                             <a class="nav-link" href="{{ app.user ? 'logout' : 'login' }}" >{{ app.user ? 'Đăng xuất' : 'Đăng nhập' }}</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                        <button class="btn btn-primary" type="button">Tìm kiếm</button>
-                    </form>
+                        <form class="d-flex" action="{{ path('search') }}" method="GET" style="margin-right: 40px;">
+                            <input class="form-control me-sm-0" type="search" name="keyword" placeholder="Tên sản phẩm " required>
+                            <button class="btn btn-secondary my-2 my-sm-0 mx-2" type="submit">Search</button>
+                        </form>
                 </div>
             </div>
         </nav>
