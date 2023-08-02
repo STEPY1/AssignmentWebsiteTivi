@@ -1,3 +1,27 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+shoot_bullet:
+    path: /shoot-bullet
+    controller: App\Controller\GameController::shootBullet
+
+contact_new:
+    path: /contact/new
+    controller: App\Controller\ContactController::new
+
+app_user_index:
+    path: /user
+    controller: App\Controller\UserController::index
+    methods: GET
+    # Đây là route cho trang index (app_user_index).
+    # Đường dẫn URL "/" sẽ gọi đến action "index" của "App\Controller\UserController".
+    # Chỉ chấp nhận phương thức GET.
+
+app_error:
+    path: /error
+    controller: App\Controller\ErrorController::index
+    methods: GET
+    # Đây là route cho trang lỗi (app_error).
+    # Đường dẫn URL "/error" sẽ gọi đến action "errorPage" của "App\Controller\ErrorController".
+    # Chỉ chấp nhận phương thức GET.

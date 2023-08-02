@@ -446,40 +446,41 @@
 <section class="packages">
     <div class="container">
         <form method="post">
-        <div class="main-txt py-md-2">
-            <h1 class="h3 mb-3 font-weight-normal py-md-2">Đăng kí<span> tài khoản</span></h1>
-        </div>
-        {{ form_errors(registrationForm) }}
-        {{ form_start(registrationForm) }}
-        <div class="main-txt py-md-2">
-
-            <h3><strong>Login</strong></h3>
-            <div class="form-floating mb-3">
-                <label for="inputEmail"></label>
-                {{ form_widget(registrationForm.email, { 'attr': {'class': 'form-control', 'autocomplete': 'email', 'required': 'required'} }) }}
-            </div>
-            <h3><strong>Password</strong></h3>
-            <div class="form-floating mb-10">
-                <label for="inputPassword"></label>
-                {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'form-control', 'autocomplete': 'new-password', 'required': 'required'} }) }}
-            </div>
-                <label>
-                        Agree to Terms {{ form_widget(registrationForm.agreeTerms) }}
-                </label>
             <div class="main-txt py-md-2">
-                <h1>
-                    <button  class="btn btn-lg btn-warning col-left py-md-2" type="submit"> Đăng kí</button>
-                </h1>
+                <h1 class="h3 mb-3 font-weight-normal py-md-2">Đăng kí<span> tài khoản</span></h1>
             </div>
-        </div>
+
+            {{ form_start(registrationForm) }}
+            <div class="main-txt py-md-2">
+                <h3><strong>Login</strong></h3>
+                <div class="form-floating mb-3">
+                    {{ form_widget(registrationForm.email, { 'attr': {'class': 'form-control', 'autocomplete': 'email', 'required': 'required'} }) }}
+                    {% if form_errors(registrationForm.email) %}
+                        <div class="alert alert-danger">
+                            {{ form_errors(registrationForm.email) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <h3><strong>Password</strong></h3>
+                <div class="form-floating mb-10">
+                    <label for="inputPassword"></label>
+                    {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'form-control', 'autocomplete': 'new-password', 'required': 'required'} }) }}
+                </div>
+
+                <label>
+                    Agree to Terms {{ form_widget(registrationForm.agreeTerms) }}
+                </label>
+                <div class="main-txt py-md-2">
+                    <h1>
+                        <button  class="btn btn-lg btn-warning col-left py-md-2" type="submit"> Đăng kí</button>
+                    </h1>
+                </div>
+            </div>
             {{ form_end(registrationForm) }}
         </form>
-        </div>
-
-
-
     </div>
 </section>
+
     </body>
 
 

@@ -462,7 +462,7 @@
                 <th>Email</th>
                 <th>Roles</th>
                 <th>Password</th>
-                <th>actions</th>
+                <th>Actions</th>
                 <th>Remove</th>
             </tr>
         </thead>
@@ -479,8 +479,8 @@
                 <td>
 
                     <a class="btn btn-warning" href="{{ path('app_user_show', {'id': user.id}) }}">Hiện</a>
-{#                    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>#}
-{#                    {{ include('user/_delete_form.html.twig') }}#}
+                        <a class="btn btn-warning" href="{{ path('app_user_edit', {'id': user.id}) }}">Sửa</a>
+    {#                    {{ include('user/_delete_form.html.twig') }}#}
                 </td>
                 <td>{{ include('user/_delete_form.html.twig') }}</td>
 

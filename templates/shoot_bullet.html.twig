@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+
+
+        .fireworks-container {
+            position: relative;
+            width: auto;
+            height: 500px;
+            cursor: crosshair;
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffdd00;
+            display: none;
+            animation: explode 1s ease-out;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(20);
+                opacity: 0;
+            }
+        }
+    </style>
+    <body>
+    <div class="fireworks-container" onclick="createFirework(event)">
+        <div class="firework" id="firework"></div>
+    </div>
+    </body>
+
+
+
+    <script>
+        function createFirework(event) {
+            const container = document.querySelector('.fireworks-container');
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+
+            const x = event.clientX - container.offsetLeft;
+            const y = event.clientY - container.offsetTop;
+
+            firework.style.left = x + 'px';
+            firework.style.top = y + 'px';
+            container.appendChild(firework);
+
+            setTimeout(() => {
+                firework.style.display = 'block';
+                firework.style.transform = 'scale(8)';
+            }, 0);
+
+            setTimeout(() => {
+                firework.remove();
+            }, 1000);
+        }
+    </script>
+{% endblock %}

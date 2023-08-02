@@ -26,4 +26,6 @@ class SearchController extends AbstractController
             'keyword' => $keyword,
         ]);
     }
+
+
 }

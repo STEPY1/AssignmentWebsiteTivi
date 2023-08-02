@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * @extends ServiceEntityRepository<Product>
@@ -41,10 +42,21 @@ class ProductRepository extends ServiceEntityRepository
     public function searchByKeyword(string $keyword): array
     {
         $qb = $this->createQueryBuilder('p');
-        $qb->andWhere($qb->expr()->like('p.Name', ':keyword'))
-            ->setParameter('keyword', '%' . $keyword . '%');
-
+        $qb->andWhere(
+            $qb->expr()->orX(
+            $qb->expr()->like('p.Name', ':keyword'),
+            $qb->expr()->like('p.Info', ':keyword')
+                )
+            )->setParameter('keyword', '%' . $keyword . '%');
         return $qb->getQuery()->getResult();
+    }
+    // Phương thức lấy danh sách sản phẩm và sắp xếp theo ngày tạo mới nhất
+    public function findAllSortedByDate()
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.createdAt', 'DESC') // Sắp xếp theo ngày tạo mới nhất
+            ->getQuery()
+            ->getResult();
     }
 
 

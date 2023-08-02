@@ -11,13 +11,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-g/k8K8K3YzpeIUeJ1Ruzlkjw7Qdt42FY9XtkV0u7vtTQ3fXsQ5My5LavdJgPGe5lfo25WTzoRlL06Rq8Okhbiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+
         {% endblock %}
         <style>
             *{
@@ -47,9 +49,11 @@
             .navbar-toggler span{
                 color: #ffa500;
             }
-            .navbar-nav{
-                margin-left: 20px;
+            /* Vertically centered modal */
+            .navbar-nav {
+                position: relative; /* Thiết lập vị trí tương đối cho menu */
             }
+
 
             .nav-item a.nav-link{
                 font-size: 18px;
@@ -388,19 +392,38 @@
                 background: #ffa500;
             }
             /* Footer End */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: white;
+                margin: 15% auto;
+                padding: 20px;
+                border-radius: 5px;
+                width: 300px;
+            }
 
         </style>
     </head>
     <body>
 
     {% block header %}
+        <header>
         <nav class="navbar navbar-expand-lg" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ path('app_home') }}" id="logo"><span>♈Ru</span>by</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                        <span><i class="fa-solid fa-bars"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mynavbar">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="{{ path('app_home') }}">Trang chủ</a>
@@ -409,66 +432,49 @@
                             <a class="nav-link" href="{{ path('app_home_1') }}">Tất cả các sản phẩm TV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contant">Liên hệ</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ app.user ? 'logout' : 'login' }}" >{{ app.user ? 'Đăng xuất' : 'Đăng nhập' }}</a>
+                            <a class="nav-link" href="{{ path('app_contact_new') }}">Liên hệ</a>
                         </li>
                     </ul>
-                        <form class="d-flex" action="{{ path('search') }}" method="GET" style="margin-right: 40px;">
-                            <input class="form-control me-sm-0" type="search" name="keyword" placeholder="Tên sản phẩm " required>
-                            <button class="btn btn-secondary my-2 my-sm-0 mx-2" type="submit">Search</button>
-                        </form>
-                </div>
-            </div>
-        </nav>
-    {%  endblock %}
-    {% block body %}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    <form class="d-flex" action="{{ path('search') }}" method="GET" style="margin-right: 40px;">
+                        <input class="form-control me-sm-0" type="search" name="keyword" placeholder="Vui lòng nhập tên sản phẩm" required>
+                        <button class="btn btn-warning my-2 my-sm-0 mx-2" type="submit">Search</button>
                     </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="logoutContainer">
+                            {% if app.user %}
+                                <a class="nav-link" href="javascript:void(0);" onclick="confirmLogout()" id="logoutLink">
+                                    <i class="fa-solid fa-user"></i> Đăng xuất
+                                </a>
+                            {% else %}
+                                <a class="nav-link" href="{{ path('app_login') }}">
+                                    <i class="fa-solid fa-user"></i> Đăng nhập
+                                </a>
+                            {% endif %}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
+            <script>
+                function confirmLogout() {
+                    var result = confirm('Bạn có chắc chắn muốn đăng xuất?');
+                    if (result) {
+                        // Nếu người dùng xác nhận đăng xuất
+                        window.location.href = "{{ path('app_logout') }}"; // Thay đổi đường dẫn logout tùy vào ứng dụng của bạn
+                    }
+                    else {
+                        // Nếu người dùng hủy đăng xuất, không làm gì cả
+                    }
+                }
+            </script>
+        </header>
+    {%  endblock %}
+
+    {% block body %}
+<body>
+    </body>
 
     {% endblock %}
     </body>
-
-
 </html>

@@ -6,6 +6,8 @@
 parameters:
     product_image_directory: '%kernel.project_dir%/public/Image'
 services:
+    App\Repository\ProductRepository:
+        tags: ['doctrine.repository_service']
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.

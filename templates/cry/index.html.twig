@@ -203,76 +203,242 @@
 
 
             /* Section Packages Start */
-            .main-txt h1{
-                text-align: center;
-                margin-top: 30px;
-                font-weight: 600;
-                text-shadow: 0px 1px 1px black;
+
+            /* Style for the main packages section */
+            .packages {
+
+                background-color: #f7f7f7;
             }
-            .main-txt-1 btn{
-                width: 190px;
-                height: 38px;
+
+            /* Style for the main heading */
+            .main-txt h1 {
+                font-size: 36px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            /* Style for the main heading span */
+            .main-txt h1 span {
+                color: #f39c12;
+            }
+
+            /* Style for the button to toggle the navbar collapse */
+            .navbar-toggler {
                 border: none;
-                border-radius: 5px;
-                background: #ffa500;
-                color: white;
-                letter-spacing: 2px;
-                font-weight: 550px;
-                transition: 0.5s ease;
+                background-color: transparent;
+                color: #000;
+                font-size: 18px;
                 cursor: pointer;
             }
-            .main-txt-1 h1{
+
+            .navbar-toggler span {
+                margin-right: 5px;
+            }
+
+            /* Style for the hint list in the collapsed navbar */
+            .main-hint {
+                margin-top: 10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .main-hint li {
+                margin-bottom: 10px;
+            }
+
+            .main-hint a.btn {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #000;
+                text-decoration: none;
+                background-color: #f39c12;
+                padding: 10px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .main-hint a.btn:hover {
+                background-color: #e67e22;
+            }
+
+            /* Style for the product cards in the row */
+            .row .col-md-4 {
+                position: relative;
+                transition: transform 0.3s;
+            }
+
+            .row .col-md-4:hover {
+                transform: scale(1.05);
+            }
+
+            .card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .card img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+            .card-body a {
+                display: inline-block;
+                background-color: #FFA500; /* Màu cam đậm */
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                margin-top: 10px;
+                transition: background-color 0.3s;
+            }
+
+            .card-body a:hover {
+                background-color: #FF8C00; /* Màu cam nhạt */
+            }
+            .packages .card-body {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.9);
+                transform: translateY(100%);
+                transition: transform 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+            }
+
+            .packages .card-body h3,
+            .packages .card-body .star,
+            .packages .card-body h6,
+            .packages .card-body a {
+                margin-bottom: 10px;
+            }
+
+            .packages .card:hover .card-body {
+                transform: translateY(0);
+            }
+            .product-card {
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+            .product-card .card-body {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .product-card:hover .card-body {
+                opacity: 1;
+            }
+
+            .notification {
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #555;
+                padding: 8px;
+                background-color: #ffc107;
+                border-radius: 5px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+                opacity: 0.8;
+                display: none;
+            }
+
+            .product-card:hover .notification {
+                display: block;
+            }
+
+            /* Thêm hiệu ứng làm mờ hình ảnh khi hover */
+            .product-card:hover img {
+                opacity: 0.2;
+            }
+            /* Thêm hiệu ứng hover cho phần "Thông tin sản phẩm" */
+            .product-info a {
+                color: #000;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+            }
+
+            .product-info a:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #ffc107; /* Màu sắc hiệu ứng */
+                transform: scaleX(0); /* Thanh hiệu ứng mặc định bị thu gọn */
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            .product-info a:hover:after {
+                transform: scaleX(1); /* Thanh hiệu ứng được mở rộng khi hover vào liên kết */
+            }
+            /* Định dạng màu sắc cho hình ngôi sao và chữ hiển thị đánh giá */
+            .star {
+                color: #FFA500; /* Màu cam đậm */
+                display: flex;
+                align-items: center;
+            }
+
+            .star i {
+                font-size: 24px;
+                margin-right: 3px;
+            }
+
+            .star .checked {
+                color: #FFA500; /* Màu cam đậm */
+            }
+
+            /* Style for the "Xem tất cả sản phẩm" button */
+            .main-txt-1 h1 {
                 text-align: center;
                 margin-top: 30px;
-                font-weight: 600;
-                text-shadow: 0px 1px 1px black;
+            }
 
-            }
-            .main-txt-1 h1 span{
-                color: #ffa500;
-            }
-            .main-txt h1 span{
-                color: #ffa500;
-            }
-            .packages .card{
-                border-radius: 5px;
-                border: none;
-                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-            }
-            .packages .card img{
-                border-radius: 5px;
-            }
-            .packages .card .card-body{
-                background: transparent;
-            }
-            .packages .card .card-body h3{
-                font-size: 25px;
-                font-weight: 600;
-            }
-            .packages .card .card-body p{
-                font-size: 15px;
-            }
-            .checked{
-                color: #ffa500;
-            }
-            .star i{
-                font-size: 15px;
-            }
-            .packages .card .card-body h6{
-                font-size: 20px;
-            }
-            .packages .card .card-body a{
-                padding: 10px;
+            .main-txt-1 a.btn {
+                text-transform: uppercase;
+
+                color: #000;
                 text-decoration: none;
-                background: #ffa500;
-                color: white;
+                border: 2px solid #f39c12;
+                padding: 10px 30px;
                 border-radius: 5px;
-                width: 80px;
+                transition: background-color 0.3s, color 0.3s;
             }
-            .packages .card .card-body a:hover{
-                padding: 12px;
-                color: black;
+
+            .main-txt-1 a.btn:hover {
+                background-color: #f39c12;
+                color: #fff;
             }
+
             /* Section Packages End */
 
 
@@ -281,7 +447,7 @@
             /* Section Services Start */
             .services{
                 background: #f9f9f9;
-                margin-top: 50px;
+
             }
             .services .card{
                 box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
@@ -303,218 +469,142 @@
             /* Section Services End */
 
 
-
-
-
-            /* Section Gallary Start */
-            .gallary{
-                margin-top: 50px;
-            }
-            .gallary .card{
-                border-radius: 10px;
-                box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-                cursor: pointer;
-            }
-            .gallary .card img{
-                border-radius: 10px;
-                transition: 0.5s;
-            }
-            .gallary .card img:hover{
-                transform: scale(1.1);
-            }
-            /* Section Gallary End */
-
-
-
-
-            /* About Start */
-            .about{
-                padding: 50px;
-                margin-top: 50px;
-                background: #f9f9f9;
-            }
-            .about span{
-                color: #ffa500;
+            /* CSS riêng cho phần "Thông tin liên hệ" */
+            #contact {
+                background-color: #f9f9f9;
             }
 
-            .about .card{
-                border-radius: 10px;
-            }
-            .about .card img{
-                border-radius: 10px;
-            }
-            .about h2{
-                font-weight: 600;
-                letter-spacing: 1px;
-            }
-            .about p{
-                font-weight: 500;
-            }
-            #about-btn{
-                width: 190px;
-                height: 38px;
-                border: none;
-                border-radius: 5px;
-                background: #ffa500;
-                color: white;
-                letter-spacing: 2px;
-                font-weight: 550px;
-                transition: 0.5s ease;
-                cursor: pointer;
-            }
-            #about-btn a{
-                font-size: 16px;
-                font-weight: 550;
-                color: orange;
-                letter-spacing: 1px;
-                border-radius: 3px;
-                transition: 0.5s ease;
-            }
-            #about-btn:hover a{
-
-                background: #ffa500;
-                color: black;
-            }
-            #about-btn:hover{
-                width: 209px;
-                background: #ffa500;
-                color: white;
-            }
-
-            @media (max-width:765px){
-                .about{
-                    padding: 0;
-                }
-            }
-            /* About End */
-
-
-
-
-            /* Footer Start */
-            #footer{
-                width: 100%;
-                margin-top: 150px;
+            #contact .main-txt h1 {
+                font-size: 36px;
+                font-weight: bold;
+                text-transform: uppercase;
                 text-align: center;
-                background: #f9f9f9;
+                margin-bottom: 20px;
             }
-            #footer h1{
+
+            #contact .main-txt h1 span {
+                color: #f39c12;
+            }
+
+            #contact .row {
+                margin-top: 50px;
+            }
+
+            #contact .contact-info h2 {
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            #contact .contact-info p {
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            #contact .contact-btn {
+                text-align: center;
+            }
+
+            #contact .btn {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #fff;
+                background-color: #f39c12;
+                padding: 12px 25px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+
+            #contact .btn:hover {
+                background-color: #e67e22;
+            }
+
+            #contact .contact-image img {
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            /* CSS cho phần Footer */
+            .site-footer {
+                background-color: #f9f9f9;
+                text-align: center;
+                padding: 30px 0;
+            }
+
+            .site-footer h1 {
                 font-weight: 600;
-                padding-top: 30px;
-                text-shadow: 0px 0px 1px black;
+                font-size: 36px;
+                color: #000;
+                margin-bottom: 20px;
             }
-            #footer h1 span{
+
+            .site-footer h1 span {
                 color: #ffa500;
             }
-            .social-links i{
-                padding: 10px;
-                border-radius: 5px;
-                font-size: 20px;
-                background: black;
-                color: white;
-                margin-left: 10px;
-                margin-bottom: 10px;
-                transition: 0.5s ease;
-                cursor: pointer;
+
+            .site-footer p {
+                font-weight: 500;
+                font-size: 16px;
+                color: #000;
+                margin-bottom: 20px;
             }
-            .social-links i:hover{
-                background: #ffa500;
+
+            .social-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
             }
-            /* Footer End */
-            .main-hint li {
-                padding: 10px;
+
+            .social-links a {
                 text-decoration: none;
-                background: light;
-                color: white;
-                border-radius: 15px;
-                background-size: 10px;
+                color: #000;
+                margin-right: 15px;
+                font-size: 24px;
             }
-            .main-hint li:hover{
-                padding: 10px;
-                text-decoration: none;
-                background: light;
-                color: white;
-                border-radius: 15px;
-                background-size: 10px;
+
+            /* Hiệu ứng hover cho các biểu tượng mạng xã hội */
+            .social-links a:hover {
+                color: #ffa500;
             }
-            .main-hint li a:hover{
-                text-decoration: none;
-                background: #ffa500;
-                color: white;
-                border-radius: 15px;
+
+
+            .site-footer {
+
+                color: black;
+                padding: 30px 0;
             }
+
         </style>
     </head>
     <body>
-    {#    {% for product in products %}#}
-
-    {#    <div class="card-wrapper">#}
-    {#        <div class="card">#}
-    {#           <!-- card left -->#}
-    {#            <div class="product-imgs">#}
-    {#                <div class="img-display">#}
-    {#                    <div class="img-showcase">#}
-    {#                        <img src="{{ asset('image/' ~ product.getImage()) }}" alt="{{ product.getName() }}">#}
-    {#                    </div>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#            <!-- card right -->#}
-    {#            <div class="product-content">#}
-    {#                <h2 class="product-title">{{ product.getName() }}</h2>#}
-    {#                <a href="#" class="product-link">Visit Tivi store</a>#}
-    {#                <div class="product-rating">#}
-    {#                    <i class = "fas fa-star"></i>#}
-    {#                    <i class = "fas fa-star"></i>#}
-    {#                    <i class = "fas fa-star"></i>#}
-    {#                    <i class = "fas fa-star"></i>#}
-    {#                    <i class = "fas fa-star-half-alt"></i>#}
-    {#                    <span>4.5 (101)</span>#}
-    {#                </div>#}
-    {#                <div class="product-price">#}
-    {#                    <p class = "last-price">Old Price: <span>90.000.001 VNĐ</span></p>#}
-    {#                    <p class = "new-price">New Price: <span>{{ product.getPrice() }} VNĐ</span></p>#}
-    {#                </div>#}
-    {#                <div class = "product-detail">#}
-    {#                    <h2>About this item: </h2>#}
-    {#                    <p>{{ product.getInfo() }}</p>#}
-    {#                    <ul>#}
-    {#                        <li>Color: <span>Black</span></li>#}
-    {#                        <li>Available: <span>in stock</span></li>#}
-    {#                        <li>Category: <span>Tivi</span></li>#}
-    {#                        <li>Shipping Area: <span>All over the world</span></li>#}
-    {#                        <li>Shipping Fee: <span>Free</span></li>#}
-    {#                    </ul>#}
-    {#                </div>#}
-    {#            </div>#}
-
-
-    {#        </div>#}
-    {#    </div>#}
-    {#    {% endfor %}#}
 
     <!-- Section Packages Start -->
     <section class="packages" id="packages">
         <div class="container">
-
-            <div class="main-txt " >
-                <h1 href="{{ path('app_home') }}" role="button"><span  >TV </span>Crystal</h1>
+            <div class="main-txt">
+                <h1 href="{{ path('app_home') }}" role="button"><span>TV </span>OLED</h1>
             </div>
-            <div class="main-hint col-md-8 " >
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
-                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
-{#                <li class="col btn"><a class="btn"  href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>#}
+            <div class="main-hint col-md-12 d-flex justify-content-center"> <!-- Thêm class "d-flex justify-content-center" để căn giữa -->
+                <li class="col"><a class="btn" href="http://127.0.0.1:8000/samsung"><strong>OLED</strong></a></li>
+                <li class="col"><a class="btn" href="http://127.0.0.1:8000/sonic"><strong>QLED</strong></a></li>
+                <li class="col"><a class="btn" href="http://127.0.0.1:8000/neo_qled8k"><strong>Neo QLED 8K</strong></a></li>
+                <li class="col"><a class="btn" href="http://127.0.0.1:8000/neoqled4k"><strong>Neo QLED 4K</strong></a></li>
+                <li class="col"><a class="btn" href="http://127.0.0.1:8000/cry"><strong>Crystal UHD</strong></a></li>
             </div>
 
             <div class="row" style="margin-top: 30px;">
                 {% for product in products %}
-                    <div class="col-md-4 py-5 py-md-2">
+                    <div class="col-md-4 py-5 py-md-2 product-card">
                         <div class="card">
-                            <img src="{{ asset('image/' ~ product.getImage()) }}"  alt={{ product.getName() }}>
+                            <img src="{{ asset('image/' ~ product.getImage()) }}" alt="{{ product.getName() }}">
+                            <div class="notification">HOT</div>
                             <div class="card-body">
                                 <h3>{{ product.getName() }}</h3>
-{#                                <p>{{ product.getInfo() }}</p>#}
                                 <div class="star">
                                     <i class="fa-solid fa-star checked"></i>
                                     <i class="fa-solid fa-star checked"></i>
@@ -523,101 +613,65 @@
                                     <i class="fa-solid fa-star "></i>
                                 </div>
                                 <h6>Giá: <strong>{{ product.getPrice() }} vnđ</strong></h6>
-                                <a href="{{ path('app_detail_show', {'id': product.id}) }} ">Thông tin sản phẩm</a>
+                                <a href="{{ path('app_detail_show', {'id': product.id}) }}"><strong>Thông tin sản phẩm</strong></a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
-
     </section>
     <!-- Section Packages End -->
 
 
 
 
-    <section class="about" id="contant">
-        <div class="container">
 
-            <div class="main-txt py-md-3">
+    {#    <!-- About Start -->#}
+    <section  id="contact">
+        <div class="container">
+            <div class="main-txt py-4">
                 <h1><span>Thông tin</span> liên hệ</h1>
             </div>
-            <div class="row" style="margin-top: 50px;">
-
-                <div class="col-md-6 py-3 py-md-0">
-                    <div class="card">
-                        <img src="Image/contact-us.jpg" alt="">
-
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h2><span>Thông tin</span> liên hệ</h2>
+                        <p>Nếu có thắc mắc, vui lòng để lại thông tin liên hệ:</p>
+                        <div class="contact-btn">
+                            <a href="{{ path('app_contact_new') }}" class="btn">Liên hệ ngay</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 py-3 py-md-0">
-                    <h2 style="text-align: center"><span>Thông tin</span> liên hệ</h2>
-                    <h2 style="text-align: center">👇👇👇</h2>
-                    {#                    <p>5 điều phải biết khi mua TV ...</p>#}
-
-                    {#                    <form class="row g-3">#}
-
-                    {#                        <div class="col-md-6">#}
-                    {#                            <label for="inputEmail4" class="form-label">Name</label>#}
-                    {#                            <input type="text" class="form-control" id="inputEmail4">#}
-                    {#                        </div>#}
-                    {#                        <div class="col-md-6">#}
-                    {#                            <label for="inputphone" class="form-label">Phone</label>#}
-                    {#                            <input type="Number" class="form-control" id="inputphone">#}
-                    {#                        </div>#}
-                    {#                        <div class="col-md-12">#}
-                    {#                            <label for="inputEmail4" class="form-label">Email</label>#}
-                    {#                            <input type="email" class="form-control" id="inputEmail4">#}
-                    {#                        </div>#}
-
-                    {#                        <div class="col-12">#}
-                    {#                            <label for="inputAddress" class="form-label">Address</label>#}
-                    {#                            <input type="text" class="form-control" id="inputAddress" placeholder="99 Nguyễn trãi">#}
-                    {#                        </div>#}
-                    {#                    </form>#}
-
-                    <div class="col-12 py-md-3" style="text-align: center">
-
-                        <button type="submit"   id="about-btn">
-                            <li ><a class="btn" href="{{ path('app_contact_new') }}"><<< Click me >>></a></li>
-                        </button>
+                <div class="col-md-6">
+                    <div class="contact-image">
+                        <img src="Image/contact-us.jpg" alt="Contact Image">
                     </div>
-
                 </div>
-
             </div>
-
-
         </div>
-
     </section>
     {#    <!-- About End -->#}
 
-
-
     <!-- Footer Start -->
-    <footer id="footer">
-        <h1><span>🎯Ruby</span>.span</h1>
-        <p>Thông tin liên hệ</p>
-        <div class="social-links">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer">
+                <h1><span>♈Ru</span>by</h1>
+            </div>
+            <p>Thông tin liên hệ</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100092994345599"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/watch?v=stHyBrM-dtg"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
         </div>
-        {#        <div class="credit">#}
-        {#            <p>Designed By <a href="#">SA Coding</a></p>#}
-        {#        </div>#}
-        {#        <div class="copyright">#}
-        {#            <p>&copy;Copyright SA Coding. All Rights Reserved</p>#}
-        {#        </div>#}
     </footer>
     <!-- Footer End -->
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     </body>
 {% endblock %}

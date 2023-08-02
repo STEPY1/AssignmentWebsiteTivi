@@ -26,40 +26,16 @@
         background-size: cover;
         position: initial;
     }
-    .card-wrapper{
-        max-width: 1100px;
-        margin: 0 auto;
-        background-color: #FFFFFF;
-    }
+
     img{
         width: 100%;
         display: block;
     }
-    .img-display{
-        overflow: hidden;
-    }
-    .img-showcase{
-        display: flex;
-        width: 100%;
-        transition: all 0.5s ease;
-    }
+
     .img-showcase img{
         min-width: 100%;
     }
-    .img-select{
-        display: flex;
-    }
-    .img-item{
-        margin: 0.3rem;
-    }
-    .img-item:nth-child(1),
-    .img-item:nth-child(2),
-    .img-item:nth-child(3){
-        margin-right: 0;
-    }
-    .img-item:hover{
-        opacity: 0.8;
-    }
+
     .product-content{
         padding: 2rem 1rem;
     }
@@ -95,9 +71,7 @@
     .product-link:hover{
         opacity: 0.9;
     }
-    .product-rating{
-        color: #ffc107;
-    }
+
     .product-rating span{
         font-weight: 600;
         color: #252525;
@@ -134,7 +108,6 @@
     .product-detail ul li{
         margin: 0;
         list-style: none;
-        background: url(shoes_images/checked.png) left center no-repeat;
         background-size: 18px;
         padding-left: 1.7rem;
         margin: 0.4rem 0;
@@ -143,9 +116,6 @@
     }
     .product-detail ul li span{
         font-weight: 400;
-    }
-    .purchase-info{
-        margin: 1.5rem 0;
     }
     .purchase-info input,
     .purchase-info .btn{
@@ -173,24 +143,7 @@
     .purchase-info .btn:hover{
         opacity: 0.9;
     }
-    .social-links{
-        display: flex;
-        align-items: center;
-    }
-    .social-links a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        color: #000;
-        border: 1px solid #000;
-        margin: 0 0.2rem;
-        border-radius: 50%;
-        text-decoration: none;
-        font-size: 0.8rem;
-        transition: all 0.5s ease;
-    }
+
 
 
     @media screen and (min-width: 992px){
@@ -199,17 +152,8 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 1.5rem;
         }
-        .card-wrapper{
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .product-imgs{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+
+
         .product-content{
             padding-top: 0;
         }
@@ -270,89 +214,240 @@
         color: black;
         border-radius: 5px;
     }
-
-    /* Section Packages End */
-        /* Footer Start */
-        #footer{
-            width: 100%;
-            margin-top: 150px;
+        /* CSS riêng cho phần Footer */
+        #footer {
+            background-color: #f9f9f9;
+            padding: 30px 0;
             text-align: center;
-            background: #f9f9f9;
         }
-        #footer h1{
+
+        #footer h1 {
             font-weight: 600;
-            padding-top: 30px;
-            text-shadow: 0px 0px 1px black;
+            font-size: 36px;
         }
-        #footer h1 span{
+
+        #footer h1 span {
             color: #ffa500;
         }
-        .social-links i{
-            padding: 10px;
+
+        #footer p {
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #000;
+            margin-right: 15px;
+        }
+
+        /* Hover cho các biểu tượng mạng xã hội */
+        .social-links a:hover {
+            color: #ffa500;
+        }
+        /* CSS riêng cho phần "Thông tin liên hệ" */
+        #contact {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        #contact .main-txt h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #contact .main-txt h1 span {
+            color: #f39c12;
+        }
+
+        #contact .row {
+            margin-top: 50px;
+        }
+
+        #contact .contact-info h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        #contact .contact-info p {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #contact .contact-btn {
+            text-align: center;
+        }
+
+        #contact .btn {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            background-color: #f39c12;
+            padding: 12px 25px;
             border-radius: 5px;
-            font-size: 20px;
-            background: black;
-            color: white;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            transition: 0.5s ease;
-            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
-        .social-links i:hover{
-            background: #ffa500;
+
+        #contact .btn:hover {
+            background-color: #e67e22;
         }
-        /* Footer End */
-</style>
+
+        #contact .contact-image img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        /* CSS cho phần Footer */
+        .site-footer {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .site-footer h1 {
+            font-weight: 600;
+            font-size: 36px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .site-footer h1 span {
+            color: #ffa500;
+        }
+
+        .site-footer p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #000;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        /* Hiệu ứng hover cho các biểu tượng mạng xã hội */
+        .social-links a:hover {
+            color: #ffa500;
+        }
+
+
+        .site-footer {
+
+            color: black;
+            padding: 30px 0;
+        }
+
+    </style>
 </head>
-<body>
-
-
-<div class="container">
-    <div class="main-txt py-md-2">
-        <h1 ><span><i class="fa-solid fa-tv"></i></span> TV</h1>
-        <a href="{{ path('app_home') }}">Trở về</a>
+    <body>
+    <div class="container">
+        <div class="main-txt py-md-2">
+            <h1><span><i class="fa-solid fa-tv"></i></span> TV</h1>
+            <a href="{{ path('app_home') }}" class="product-link"><strong>Trở về</strong></a>
+        </div>
+        <div class="card">
+            <!-- card left -->
+            <div class="product-img">
+                <img src={{ asset('image/' ~ product.Image) }} alt="{{ product.getName() }}">
+            </div>
+            <!-- card right -->
+            <div class="product-content">
+                <h2 class="product-title">{{ product.getName() }}</h2>
+                <a href="#" class="product-link">Ghé thăm cửa hàng TV</a>
+                <div class="star">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.0 (101)</span>
+                </div>
+                <div class="product-price">
+                    <h2><strong>Giá: {{ product.getPrice() }} VNĐ</strong></h2>
+                </div>
+                <div class="product-detail">
+                    <h2><strong>Thông tin về sản phẩm:</strong></h2>
+                    <p2>{{ product.getInfo() }}</p2><br>
+                    <br><strong>Khu vực vận chuyển:</strong> Trên toàn thế giới<br>
+                    <br><strong>Phí vận chuyển:</strong> Miễn phí
+                </div>
+            </div>
+        </div>
     </div>
-                <div class="card">
-                    <!-- card left -->
-                    <div class="product-imgs">
-                        <div class="img-display">
-                            <div class="img-showcase">
-                                <img src={{ asset('image/' ~ product.Image) }} >
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card right -->
-                    <div class="product-content">
-                        <h2 class="product-title">{{ product.getName() }}</h2>
-                        <a href="#" class="product-link">Ghé thăm cửa hàng TV</a>
-                        <div class="star">
-                            <i class = "fa-solid fa-star checked"></i>
-                            <i class = "fa-solid fa-star checked"></i>
-                            <i class = "fa-solid fa-star checked"></i>
-                            <i class = "fa-solid fa-star checked"></i>
-                            <i class = "fa-solid fa-star "></i>
-                            <span>4.0 (101)</span>
-                        </div>
-                        <div class="product-price">
-                            {#                    <p class = "last-price">Old Price: <span>90.000.001 VNĐ</span></p>#}
-                            <p class = "new-price"><strong>Giá:</strong> <strong>{{ product.getPrice() }} </strong>VNĐ</p>
-                        </div>
-                        <div class = "product-detail">
-                            <h2><strong>Thông tin về sản phẩm: </strong></h2>
-                            <p3>{{ product.getInfo() }}</p3>
-{#                            <ul>#}
-{#                                <li>* <strong>Màu :</strong> <span>Đen</span></li>#}
-{#                                <li>* <strong>Hàng :</strong> <span>Còn hàng</span></li>#}
-{#                                <li>* <strong>Thể loại :</strong> <span>TV</span></li>#}
-{#                                <li>* <strong>Khu vực vận chuyển :</strong> <span>Trên toàn thế giới</span></li>#}
-{#                                <li>* <strong>Phí vận chuyển :</strong> <span>Miễn phí</span></li>#}
-{#                            </ul>#}
+
+    {#    <!-- About Start -->#}
+    <section class="about" id="contact">
+        <div class="container">
+            <div class="main-txt py-4">
+                <h1><span>Thông tin</span> liên hệ</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h2><span>Thông tin</span> liên hệ</h2>
+                        <p>Nếu có thắc mắc, vui lòng để lại thông tin liên hệ:</p>
+                        <div class="contact-btn">
+                            <a href="{{ path('app_contact_new') }}" class="btn">Liên hệ ngay</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="contact-image" >
+                        <iframe style="border-radius: 15px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.08428733736!2d106.6231409231167!3d10.736404958341389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9535b60699%3A0x4737f3be8bd41d5b!2s%C3%86ON%20MALL%20Tan%20Phu%20Celadon!5e0!3m2!1sen!2s!4v1690612672772!5m2!1sen!2s" width="510" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {#    <!-- About End -->#}
 
-</div>
+    <!-- Footer Start -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer">
+                <h1><span>♈Ru</span>by</h1>
+            </div>
+            <p>Thông tin liên hệ</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100092994345599"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/watch?v=stHyBrM-dtg"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    </body>
 {% endblock %}
+
+

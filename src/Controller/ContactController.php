@@ -9,19 +9,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 #[Route('/contact')]
 class ContactController extends AbstractController
 {
     #[Route('/', name: 'app_contact_index', methods: ['GET'])]
+
     public function index(ContactRepository $contactRepository): Response
     {
-        return $this->render('contact/index.html.twig', [
-            'contacts' => $contactRepository->findAll(),
-        ]);
+        if ($this->isGranted('ROLE_ADMIN')) {
+            return $this->render('contact/index.html.twig', [
+                'contacts' => $contactRepository->findAll(),
+            ]);
+        }
+        else {
+            return $this->redirectToRoute('app_error');
+        }
     }
 
     #[Route('/new', name: 'app_contact_new', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_USER')]
     public function new(Request $request, ContactRepository $contactRepository): Response
     {
         $contact = new Contact();
@@ -49,8 +57,10 @@ class ContactController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_contact_edit', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function edit(Request $request, Contact $contact, ContactRepository $contactRepository): Response
     {
+
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 

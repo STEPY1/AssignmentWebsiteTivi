@@ -1,6 +1,4 @@
 
-
-
 {% extends 'base1.html.twig' %}
 {% block body %}
     <head>
@@ -463,6 +461,7 @@
                 <th>Email</th>
                 <th>Phonenumber</th>
                 <th>Address</th>
+                <th>Reason</th>
                 <th>Actions</th>
                 <th>Remove</th>
             </tr>
@@ -475,6 +474,7 @@
                 <td>{{ contact.Email }}</td>
                 <td>{{ contact.Phonenumber }}</td>
                 <td>{{ contact.Address }}</td>
+                <td>{{ contact.Reason }}</td>
                 <td>
                     <a class="btn btn-warning" href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
 {#                    <a class="btn btn-warning" href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>#}

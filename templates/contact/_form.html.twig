@@ -1,103 +1,206 @@
 {{ form_start(form) }}
 <style>
-
-    /* About Start */
-    .about{
-        padding: 50px;
-        margin-top: 50px;
-        background: #f9f9f9;
-
+    /* CSS riêng cho phần "Thông tin liên hệ" */
+    #contact {
+        padding: 50px 0;
+        background-color: #f9f9f9;
     }
-    .about span{
+
+    #contact .main-txt h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #contact .main-txt h1 span {
+        color: #f39c12;
+    }
+
+    #contact .row {
+        margin-top: 50px;
+    }
+
+    #contact .contact-info h2 {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #contact .contact-info p {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #contact .contact-btn {
+        text-align: center;
+    }
+
+    #contact .btn {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        background-color: #f39c12;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    #contact .btn:hover {
+        background-color: #e67e22;
+    }
+
+    #contact .contact-image img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+
+
+    /* CSS cho phần Footer */
+    .site-footer {
+        background-color: #f9f9f9;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .site-footer h1 {
+        font-weight: 600;
+        font-size: 36px;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    .site-footer h1 span {
         color: #ffa500;
     }
 
-    .about .card{
-        border-radius: 10px;
-
-
-    }
-    .about .card img{
-        border-radius: 10px;
-    }
-    .about h2{
-        font-weight: 600px;
-        letter-spacing: 1px;
-    }
-    .about p{
+    .site-footer p {
         font-weight: 500;
-    }
-    #about-btn{
-
-        width: 170px;
-        height: 38px;
-        border: none;
-        border-radius: 5px;
-        background: #ffa500;
-        color: white;
-        letter-spacing: 2px;
-        font-weight: 550px;
-        transition: 0.5s ease;
-        cursor: pointer;
-    }
-    #about-btn a{
         font-size: 16px;
-        font-weight: 550;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        color: #000;
+        margin-right: 15px;
+        font-size: 24px;
+    }
+
+    /* Hiệu ứng hover cho các biểu tượng mạng xã hội */
+    .social-links a:hover {
+        color: #ffa500;
+    }
+
+
+    .site-footer {
+
         color: black;
-        letter-spacing: 1px;
-        border-radius: 3px;
-        transition: 0.5s ease;
+        padding: 30px 0;
+    }
+    /* Style for the main heading */
+    .main-txt h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-    #about-btn:hover{
-        width: 190px;
-        background: #ffa500;
-        color: white;
+    /* Style for the main heading span */
+    .main-txt h1 span {
+        color: #f39c12;
     }
-    #about-btn:hover a{
-
-        background: #ffa500;
-        color: white;
-    }
-    @media (max-width:765px){
-        .about{
-            padding: 0;
-        }
-    }
-    /* About End */
 
 </style>
-<section class="about" id="about">
+
+<div class="about">
+    <div class="main-txt py-md-2">
+        <a href="{{ path('app_home') }}"><strong>Trở về</strong></a>
+        <h1 style="text-align: center"><strong><span>Thông tin</span> liên hệ</strong></h1>
+    </div>
+
+    <div class="row" style="margin: 50px">
+        <div class="col-md-6 py-9 py-md-0">
+            <div class="card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.08428733736!2d106.6231409231167!3d10.736404958341389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9535b60699%3A0x4737f3be8bd41d5b!2s%C3%86ON%20MALL%20Tan%20Phu%20Celadon!5e0!3m2!1sen!2s!4v1690612672772!5m2!1sen!2s" width="522" height="350" style="border-radius: 15px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="col-md-6 py-9 py-md-0">
+            <form class="row g-3">
+                <div class="row g-3">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-floating d-flex">
+                            {{ form_widget(form.Name, {'attr': {'class': 'form-control', 'placeholder': 'Enter your name', 'id': 'floatingName'}}) }}
+                            {{ form_label(form.Name, 'Name', {'label_attr': {'for': 'floatingName', 'class': 'ms-2'}}) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating d-flex">
+                            {{ form_widget(form.Email, {'attr': {'class': 'form-control', 'placeholder': 'Enter your email', 'id': 'floatingEmail'}}) }}
+                            {{ form_label(form.Email, 'Email', {'label_attr': {'for': 'floatingEmail', 'class': 'ms-2'}}) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 mb-3">
+                    <div class="form-floating d-flex">
+                        {{ form_widget(form.Phonenumber, {'attr': {'class': 'form-control', 'placeholder': 'Enter your phone number', 'id': 'floatingPhonenumber'}}) }}
+                        {{ form_label(form.Phonenumber, 'Phone Number', {'label_attr': {'for': 'floatingPhonenumber', 'class': 'ms-2'}}) }}
+                    </div>
+                </div>
+                <div class="col-md-10 mb-3">
+                    <div class="form-floating d-flex">
+                        {{ form_widget(form.Address, {'attr': {'class': 'form-control', 'placeholder': 'Enter your address', 'id': 'floatingAddress'}}) }}
+                        {{ form_label(form.Address, 'Address', {'label_attr': {'for': 'floatingAddress', 'class': 'ms-2'}}) }}
+                    </div>
+                </div>
+                <div class="col-md-10 mb-3">
+                    <div class="form-floating d-flex">
+                        {{ form_widget(form.Reason, {'attr': {'class': 'form-control', 'placeholder': 'Leave a comment here', 'id': 'floatingReason', 'rows': 4}}) }}
+                        {{ form_label(form.Reason, 'Reason', {'label_attr': {'for': 'floatingReason', 'class': 'ms-2'}}) }}
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-warning" id="about-btn">{{ button_label|default('Lưu') }}</button>
+                </div>
+                {{ form_end(form) }}
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer Start -->
+<footer class="site-footer">
     <div class="container">
-        <h2 style="text-align: center"><strong><span>Thông tin</span> liên hệ</strong></h2>
-        <div class="row" style="margin: 50px">
-                <div class="col-md-6 py-9 py-md-0">
-                    <div class="card">
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6905028973815!2d106.6550054749938!3d10.758318889389376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef20e8a25b9%3A0xa276c55db8e15e7f!2zMTcgSG_DoG5nIMSQ4bupYyBUxrDGoW5nLCBQaMaw4budbmcgNCwgUXXhuq1uIDExLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1690427055806!5m2!1svi!2s" width="510" height="350" style="border:0; border-radius: 5px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 py-9 py-md-0">
-                        <div class="col-md-8">
-                            <h3>{{ form_row(form.Name, { 'attr': {'class': 'col-md-10'} }) }}</h3>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>{{ form_row(form.Email, { 'attr': {'class': 'col-md-10'} }) }}</h3>
-                        </div>
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h3>{{ form_row(form.Phonenumber, { 'attr': {'class': 'col-md-10'} }) }}</h3>
-                        </div>
-                        <div class="col-md-10">
-                            <h3>{{ form_row(form.Address, { 'attr': {'class':'col-md-10'} }) }}</h3>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-warning" id="about-btn ">{{ button_label|default('Lưu') }}</button>
-                </div>
+        <div class="footer">
+            <h1><span>♈Ru</span>by</h1>
+        </div>
+        <p>Thông tin liên hệ</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100092994345599"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=stHyBrM-dtg"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
     </div>
-    </div>
-</section>
-{{ form_end(form) }}
+</footer>
+<!-- Footer End -->
+
+
+
